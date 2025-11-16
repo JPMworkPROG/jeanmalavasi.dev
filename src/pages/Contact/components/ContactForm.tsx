@@ -30,7 +30,7 @@ export function ContactForm({ formData }: ContactFormProps) {
 
   return (
     <div className="opacity-0 animate-fade-in-up-scroll animation-delay-500">
-      <Card className="border-border/60 bg-card p-8 space-y-5">
+      <Card className="border-border/60 bg-card p-4 sm:p-8 space-y-5">
         <div className="space-y-2 opacity-0 animate-fade-in animation-delay-700">
           <h2 className="text-2xl font-semibold">{formData.title}</h2>
           <p className="text-muted-foreground text-sm">{formData.description}</p>

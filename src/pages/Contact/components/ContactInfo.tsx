@@ -8,7 +8,7 @@ interface ContactInfoProps {
 
 export function ContactInfo({ contactInfo }: ContactInfoProps) {
   return (
-    <Card className="border-border/60 bg-card p-8 space-y-6">
+    <Card className="border-border/60 bg-card p-4 sm:p-8 space-y-6">
       <div className="space-y-2 opacity-0 animate-fade-in animation-delay-800">
         <h2 className="text-2xl font-semibold">{contactInfo.title}</h2>
         <p className="text-muted-foreground">{contactInfo.description}</p>

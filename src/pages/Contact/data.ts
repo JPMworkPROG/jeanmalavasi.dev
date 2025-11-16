@@ -57,23 +57,23 @@ export const contactInfo: ContactInfo = {
   ],
 };
 
-export interface SocialLink {
+export interface LocationAndAvailabilityItems {
   icon: ComponentType<{ className?: string }>;
   label: string;
   href?: string;
   value?: string;
 }
 
-export interface SocialLinks {
+export interface LocationAndAvailability {
   title: string;
   description: string;
-  links: SocialLink[];
+  items: LocationAndAvailabilityItems[];
 }
 
-export const socialLinks: SocialLinks = {
+export const locationAndAvailability: LocationAndAvailability = {
   title: "Localização e disponibilidade",
   description: "Entenda melhor meu contexto de trabalho e horário.",
-  links: [
+  items: [
     {
       icon: MapPin,
       label: "Localização",
