@@ -1,0 +1,107 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Send } from "lucide-react";
+import { MethodToggle } from "./MethodToggle";
+import type { FormData as FormDataType } from "../data";
+import { handleContactSubmit } from "@/lib/utils";
+
+interface ContactFormProps {
+  formData: FormDataType;
+}
+
+export function ContactForm({ formData }: ContactFormProps) {
+  const [method, setMethod] = useState<"email" | "whatsapp">("email");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formDataObj = new FormData(e.currentTarget);
+    const contactData = {
+      name: formDataObj.get("name") as string,
+      email: formDataObj.get("email") as string,
+      subject: formDataObj.get("subject") as string,
+      message: formDataObj.get("message") as string,
+    };
+
+    handleContactSubmit(contactData, method, formData.email, formData.whatsappNumber);
+  };
+
+  const inputClass = "w-full rounded-md border border-border bg-input px-4 py-2 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20";
+
+  return (
+    <div className="opacity-0 animate-fade-in-up-scroll animation-delay-500">
+      <Card className="border-border/60 bg-card p-8 space-y-5">
+        <div className="space-y-2 opacity-0 animate-fade-in animation-delay-700">
+          <h2 className="text-2xl font-semibold">{formData.title}</h2>
+          <p className="text-muted-foreground text-sm">{formData.description}</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-fade-in animation-delay-800">
+          <div className="space-y-2">
+            <label htmlFor="name" className="text-sm font-medium">
+              Nome
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              className={inputClass}
+              placeholder="Seu nome"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="email" className="text-sm font-medium">
+              E-mail
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className={inputClass}
+              placeholder="seu@email.com"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="subject" className="text-sm font-medium">
+              Assunto
+            </label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              className={inputClass}
+              placeholder="Sobre o que você gostaria de conversar?"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor="message" className="text-sm font-medium">
+              Mensagem
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows={4}
+              className={`${inputClass} resize-none`}
+              placeholder="Conte-me mais sobre seu projeto ou ideia..."
+            />
+          </div>
+
+          <MethodToggle method={method} onToggle={() => setMethod(method === "email" ? "whatsapp" : "email")} />
+
+          <Button type="submit" className="w-full sm:w-auto">
+            <Send className="mr-2 h-4 w-4" />
+            Enviar mensagem
+          </Button>
+        </form>
+      </Card>
+    </div>
+  );
+}
+
