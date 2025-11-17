@@ -64,5 +64,22 @@ export const projects: Project[] = [
     imageAlt: "Demonstração animada do TodoManager exibindo o fluxo de demandas",
     docsUrl: "https://todomanager-backend-f0230eb77fe3.herokuapp.com/docs/",
   },
+  {
+    title: "Restora — Landing Page",
+    description:
+      "Landing page da marca de cosmeticos naturais em construção, desenvolvida com foco em apresentação elegante e experiência do usuário otimizada.",
+    highlights: [
+      "Design moderno e responsivo focado na identidade visual da marca de cosméticos naturais.",
+      "Desenvolvido com Next.js 15 aproveitando as últimas features do framework.",
+      "Interface otimizada para conversão e apresentação dos produtos e valores da marca.",
+    ],
+    techStack: [
+      { label: "Next.js 15", Icon: SiNextdotjs },
+    ],
+    liveUrl: "https://www.restoracosmeticos.com.br",
+    repoUrl: "https://github.com/JPMworkPROG/restora.cosmetics",
+    imageSrc: "/projects/restora/front.gif",
+    imageAlt: "Demonstração animada da landing page Restora exibindo a identidade visual da marca de cosméticos naturais",
+  },
 ];
 
