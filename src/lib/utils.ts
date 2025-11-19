@@ -12,10 +12,9 @@ export const ANIMATION_DELAYS = {
   DEFAULT: 0.5,
   LONG: 0.6,
   BASE: 0.7,
-  EXPERIENCE_INCREMENT: 0.2,
 } as const;
 
-export function getAnimationDelay(base: number, index: number, increment: number = ANIMATION_DELAYS.EXPERIENCE_INCREMENT): string {
+export function getAnimationDelay(base: number, index: number, increment: number = ANIMATION_DELAYS.SHORT): string {
   return `${base + index * increment}s`;
 }
 

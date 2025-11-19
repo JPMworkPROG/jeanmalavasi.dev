@@ -12,7 +12,7 @@ interface FormationCardProps {
 
 export function FormationCard({ formation, index }: FormationCardProps) {
    const baseDelay = ANIMATION_DELAYS.LONG;
-   const increment = ANIMATION_DELAYS.EXPERIENCE_INCREMENT;
+   const increment = ANIMATION_DELAYS.SHORT;
    const documentBaseDelay = 1.1;
 
    return (

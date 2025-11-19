@@ -19,6 +19,7 @@ import NotFound from './pages/NotFound/NotFound.tsx'
 import Contact from './pages/Contact/Contact.tsx'
 import Formation from './pages/Formation/Formation.tsx'
 import Resume from './pages/Resume/Resume.tsx'
+import { validatePaginationSearch } from './lib/pagination'
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -40,6 +41,7 @@ const indexRoute = createRoute({
 const projectsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/projects',
+  validateSearch: validatePaginationSearch,
   component: Projects,
 })
 

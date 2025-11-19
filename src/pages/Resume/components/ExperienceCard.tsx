@@ -14,7 +14,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ experience, index, skillIcons }: ExperienceCardProps) {
    const baseDelay = ANIMATION_DELAYS.BASE;
-   const increment = ANIMATION_DELAYS.EXPERIENCE_INCREMENT;
+   const increment = ANIMATION_DELAYS.SHORT;
 
    return (
       <div

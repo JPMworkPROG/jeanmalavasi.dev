@@ -12,8 +12,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
-   const baseDelay = ANIMATION_DELAYS.LONG;
-   const increment = ANIMATION_DELAYS.EXPERIENCE_INCREMENT;
+   const baseDelay = ANIMATION_DELAYS.SHORT;
+   const increment = ANIMATION_DELAYS.SHORT;
 
    return (
       <div

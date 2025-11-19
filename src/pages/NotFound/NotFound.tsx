@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Home, AlertCircle } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { PAGINATION_CONFIG } from "@/lib/pagination";
 import "./NotFound.css";
 
 export default function NotFound() {
@@ -31,7 +32,7 @@ export default function NotFound() {
               </Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link to="/projects">
+              <Link to="/projects" search={{ page: PAGINATION_CONFIG.DEFAULT_PAGE }}>
                 Ver Projetos
               </Link>
             </Button>
