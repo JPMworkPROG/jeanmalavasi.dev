@@ -1,12 +1,16 @@
 import type { ComponentType } from "react";
+import { GrPowerCycle } from "react-icons/gr";
 import {
   SiDocker,
+  SiDotnet,
   SiExpress,
   SiNextdotjs,
   SiPrisma,
   SiReacthookform,
   SiReactquery,
+  SiShadcnui,
   SiSqlite,
+  SiTailwindcss,
 } from "react-icons/si";
 
 export interface ProjectsHeader {
@@ -44,9 +48,9 @@ export const projects: Project[] = [
     description:
       "Aplicação full stack que orquestra o planejamento de produção da Latinhas LLC, combinando uma API Express + Prisma documentada em OpenAPI com uma interface Next.js responsiva pronta para uso corporativo.",
     highlights: [
+      "Frontend em Next.js 14 com React Hook Form, TanStack Query e dark mode nativo.",
       "Backend modular em Express 4 + Prisma 5, validações centralizadas, logging estruturado e OpenAPI pública para squads parceiros.",
       "CRUD completo de demandas e SKUs com validações, paginação e exclusão em cascata.",
-      "Frontend em Next.js 14 com React Hook Form, TanStack Query e dark mode nativo.",
       "Integração containerizada com Docker e pipeline pronto para múltiplos ambientes.",
     ],
     techStack: [
@@ -57,6 +61,8 @@ export const projects: Project[] = [
       { label: "Prisma 5", Icon: SiPrisma },
       { label: "SQLite", Icon: SiSqlite },
       { label: "Docker", Icon: SiDocker },
+      { label: "Shadcn UI", Icon: SiShadcnui },
+      { label: "TailwindCSS", Icon: SiTailwindcss },
     ],
     liveUrl: "https://todomanager-frontend-ed80ca3b976d.herokuapp.com/demand",
     repoUrl: "https://github.com/JPMworkPROG/TodoManager",
@@ -67,19 +73,41 @@ export const projects: Project[] = [
   {
     title: "Restora — Landing Page",
     description:
-      "Landing page da marca de cosmeticos naturais em construção, desenvolvida com foco em apresentação elegante e experiência do usuário otimizada.",
+      "Landing page da marca de cosmeticos, desenvolvida com foco em apresentação elegante e experiência do usuário otimizada.",
     highlights: [
-      "Design moderno e responsivo focado na identidade visual da marca de cosméticos naturais.",
       "Desenvolvido com Next.js 15 aproveitando as últimas features do framework.",
+      "Design moderno e responsivo focado na identidade visual da marca de cosméticos naturais.",
       "Interface otimizada para conversão e apresentação dos produtos e valores da marca.",
+      "Responsividade para todos os dispositivos e telas."
     ],
     techStack: [
       { label: "Next.js 15", Icon: SiNextdotjs },
+      { label: "TailwindCSS", Icon: SiTailwindcss },
+      { label: "Shadcn UI", Icon: SiShadcnui },
     ],
     liveUrl: "https://www.restoracosmeticos.com.br",
     repoUrl: "https://github.com/JPMworkPROG/restora.cosmetics",
     imageSrc: "/projects/restora/front.gif",
     imageAlt: "Demonstração animada da landing page Restora exibindo a identidade visual da marca de cosméticos naturais",
+  },
+  {
+    title: "GenericRestClient - Cliente HTTP REST genérico",
+    description:
+      "Cliente REST genérico para .NET 9.0 com suporte a autenticação, rate limiting e retry automático. Desenvolvido como solução para integração com APIs REST de forma resiliente e configurável.",
+    highlights: [
+      "Autenticação flexível com suporte a Bearer Token, OAuth2 (com refresh automático) e API Key via header ou query string.",
+      "Rate limiting configurável com controle de requisições por minuto, fila automática e tratamento de limites excedidos.",
+      "Retry automático inteligente para códigos 429 e 5xx, com suporte a header Retry-After e backoff exponencial ou linear configurável.",
+      "Resiliência robusta usando Polly para tratamento automático de falhas transitórias (timeout, DNS, etc.) e operações HTTP completas (GET, POST, PUT, DELETE).",
+    ],
+    techStack: [
+      { label: ".NET 9.0", Icon: SiDotnet },
+      { label: "Polly", Icon: GrPowerCycle },
+    ],
+    liveUrl: "https://www.nuget.org/packages/GenericRestClient",
+    repoUrl: "https://github.com/JPMworkPROG/GenericRestClient",
+    imageSrc: "/projects/genericRestClient/logo.png",
+    imageAlt: "Demonstração do GenericRestClient exibindo funcionalidades de autenticação, rate limiting e retry automático",
   },
 ];
 
