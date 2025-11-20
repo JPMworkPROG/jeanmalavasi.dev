@@ -60,8 +60,6 @@ All colors MUST be HSL.
       zoom: 0.8;
    }
 
-  
-
    body {
       /* stylelint-disable-next-line at-rule-no-unknown */
       @apply bg-background text-foreground;
