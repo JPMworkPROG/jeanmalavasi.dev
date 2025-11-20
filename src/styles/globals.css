@@ -56,6 +56,12 @@ All colors MUST be HSL.
       @apply border-border;
    }
 
+   html {
+      zoom: 0.8;
+   }
+
+  
+
    body {
       /* stylelint-disable-next-line at-rule-no-unknown */
       @apply bg-background text-foreground;

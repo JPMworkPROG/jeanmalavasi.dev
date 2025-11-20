@@ -1,5 +1,5 @@
 export const PAGINATION_CONFIG = {
-   ITEMS_PER_PAGE: 1,
+   ITEMS_PER_PAGE: 2,
    DEFAULT_PAGE: 1,
    MIN_PAGE: 1,
 } as const;
