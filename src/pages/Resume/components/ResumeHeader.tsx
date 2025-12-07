@@ -18,21 +18,19 @@ const handleDownload = () => {
 export function ResumeHeader({ header }: ResumeHeaderProps) {
   return (
     <header className="space-y-3 opacity-0 animate-fade-in-up">
-      <div className="flex items-start justify-between gap-4">
-        <div className="space-y-3 flex-1">
-          <p className="text-muted-foreground text-sm tracking-widest opacity-0 animate-fade-in animation-delay-200">
-            {header.label}
-          </p>
-          <h1 className="text-4xl font-bold opacity-0 animate-fade-in-up animation-delay-300">
-            {header.title}
-          </h1>
-          <p className="text-muted-foreground max-w-2xl opacity-0 animate-fade-in animation-delay-500">
-            {header.description}
-          </p>
-        </div>
+      <div className="space-y-3">
+        <p className="text-muted-foreground text-sm tracking-widest opacity-0 animate-fade-in animation-delay-200">
+          {header.label}
+        </p>
+        <h1 className="text-4xl font-bold opacity-0 animate-fade-in-up animation-delay-300">
+          {header.title}
+        </h1>
+        <p className="text-muted-foreground max-w-2xl opacity-0 animate-fade-in animation-delay-500">
+          {header.description}
+        </p>
         <Button
           onClick={handleDownload}
-          className="bg-primary hover:bg-primary/90 opacity-0 animate-fade-in animation-delay-400 shrink-0 cursor-pointer"
+          className="mt-2 bg-primary hover:bg-primary/90 opacity-0 animate-fade-in animation-delay-400 cursor-pointer"
         >
           <Download className="mr-2 h-4 w-4" />
           Download PDF
