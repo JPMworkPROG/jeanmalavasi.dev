@@ -9,7 +9,6 @@ import {
   SiDotnet,
   SiOpenjdk,
   SiDocker,
-  SiKubernetes,
   SiReact,
   SiSpring,
   SiIcloud,
@@ -20,8 +19,8 @@ import {
   SiPrisma,
   SiTypeorm,
   SiMongodb,
-  SiAngular,
-  SiOpenai
+  SiOpenai,
+  SiPostgresql
 } from "react-icons/si";
 import { PiFileSql } from "react-icons/pi";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -72,7 +71,7 @@ export const manifestoData: ManifestoData = {
   collaborationCard: {
     label: "Como colaboro",
     paragraphs: [
-      "Atuo tanto no frontend quanto no backend, criando interfaces que conversam com APIs. Participo de discovery, facilito handoffs, desenho estratégias de rollout e mantenho times alinhados sobre riscos e dependências.",
+      "Atuo tanto no frontend quanto no backend, criando interfaces que conversam com APIs. Participo de discovery, facilito handoffs, dessa maneira facilitando do desenvolvimento a entrega do sistema.",
       "Valorizo comunicação clara e autonomia: comunico status com clareza, antecipo gargalos e crio documentação viva para onboardings mais rápidos.",
     ],
     signature: "— Jean Malavasi",
@@ -94,18 +93,18 @@ export interface StackMindsetItem {
 export const stackMindset: StackMindsetItem[] = [
   {
     title: "Entrega Ponta-a-Ponta",
-    description: "Planejo, desenvolvo e acompanho releases completos, da descoberta ao rollout monitorado.",
+    description: "Planejo, desenvolvo e acompanho releases completos, do levantamento de requisitos ao go-live monitorado.",
     Icon: Compass,
   },
   {
-    title: "Frontend Experiencial",
+    title: "Frontend focado na experiência do usuário",
     description:
-      "Interfaces acessíveis e performáticas usando React, animações suaves e componentização escalável.",
+      "Interfaces acessíveis e performáticas, com animações suaves e componentização escalável.",
     Icon: Layers,
   },
   {
-    title: "Backend Observável",
-    description: "APIs tipadas, monitoradas, com logs e métricas acionáveis.",
+    title: "Backend escalável e observável",
+    description: "APIs tipadas, monitoradas, com logs e métricas acionáveis, para garantir a qualidade e o desempenho do sistema.",
     Icon: Gauge,
   },
 ];
@@ -143,14 +142,12 @@ export const skills: Skills = {
     { name: "CSS", Icon: SiCss3 },
     { name: "TailwindCSS", Icon: SiTailwindcss },
     { name: "Shadcn UI", Icon: SiShadcnui },
-    { name: "Prisma", Icon: SiPrisma },
-    { name: "TypeORM", Icon: SiTypeorm },
     { name: "Csharp", Icon: TbBrandCSharp },
     { name: "Microsoft SQL Server", Icon: PiFileSql },
+    { name: "PostgreSQL", Icon: SiPostgresql },
     { name: "MongoDB", Icon: SiMongodb },
     { name: "Microsoft Azure", Icon: SiIcloud },
     { name: "Docker", Icon: SiDocker },
-    { name: "Kubernetes", Icon: SiKubernetes },
     { name: "OpenAPI", Icon: SiOpenai },
   ],
   frameworks: [
@@ -158,7 +155,8 @@ export const skills: Skills = {
     { name: ".NET", Icon: SiDotnet },
     { name: "Spring Boot", Icon: SiSpring },
     { name: "NextJs", Icon: SiNextdotjs },
-    { name: "Angular", Icon: SiAngular },
+    { name: "Prisma", Icon: SiPrisma },
+    { name: "TypeORM", Icon: SiTypeorm },
   ],
   principles: [
     { name: "DDD", Icon: Layers },
