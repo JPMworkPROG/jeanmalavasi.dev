@@ -8,7 +8,6 @@ export default function Resume() {
       <ResumeHeader header={resumeHeader} />
 
       <div className="space-y-8">
-        <h2 className="text-2xl font-semibold opacity-0 animate-fade-in-up animation-delay-600">Experiência</h2>
         {experience.map((exp, index) => (
           <ExperienceCard key={exp.company} experience={exp} index={index} skillIcons={skillIcons} />
         ))}

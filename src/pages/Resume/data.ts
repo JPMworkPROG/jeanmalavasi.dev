@@ -21,8 +21,7 @@ export interface ResumeHeader {
 export const resumeHeader: ResumeHeader = {
   label: "Currículo Profissional",
   title: "Experiência e Habilidades",
-  description:
-    "Trajetória profissional, projetos desenvolvidos e competências técnicas, com foco em integração de sistemas, APIs e fluxos de dados entre plataformas, aliando backend robusto a interfaces frontend modernas e performáticas.",
+  description: "",
 };
 
 export interface Experience {
