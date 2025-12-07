@@ -9,8 +9,10 @@ import {
   SiSharp,
   SiGit,
   SiIcloud,
+  SiDotnet,
+  SiSpring,
+  SiDocker,
 } from "react-icons/si";
-import { VscJson } from "react-icons/vsc";
 
 export interface ResumeHeader {
   label: string;
@@ -52,7 +54,7 @@ export const experience: Experience[] = [
       "Implantou padrões de qualidade e CI/CD, reduzindo retrabalho de 12 para 4 ocorrências por sprint e aumentando a cadência de entrega.",
       "Desenvolveu integração entre sistemas legados de gestão de locais, máquinas e pontos de inspeção com sensores IoT, eliminando divergências de dados e garantindo sincronização em tempo real entre plataformas.",
     ],
-    skills: ["Node.js", "TypeScript", "Java", "Git", "C#", "NestJS", "React", "Microsoft Azure", "JSON", "JavaScript"],
+    skills: ["Node.js", "TypeScript", "JavaScript", "React", "NestJS", "C#", ".NET", "Java", "Spring Boot", "Git", "Microsoft Azure", "Docker"],
   },
 ];
 
@@ -61,13 +63,15 @@ export type SkillIconsRecord = Record<string, ComponentType<{ className?: string
 export const skillIcons: SkillIconsRecord = {
   "Node.js": SiNodedotjs,
   "TypeScript": SiTypescript,
+  "JavaScript": SiJavascript,
+  "React": SiReact,
+  "NestJS": SiNestjs,
+  "C#": SiSharp,
+  ".NET": SiDotnet,
   "Java": SiOpenjdk,
   "Git": SiGit,
-  "C#": SiSharp,
-  "NestJS": SiNestjs,
-  "React": SiReact,
-  "JavaScript": SiJavascript,
   "Microsoft Azure": SiIcloud,
-  "JSON": VscJson,
+  "Spring Boot": SiSpring,
+  "Docker": SiDocker,
 };
 
