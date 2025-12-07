@@ -37,7 +37,7 @@ export const formations: Formation[] = [
     institution: "Universidade de Vila Velha - UVV",
     startDate: "Janeiro de 2019",
     endDate: "Janeiro de 2023",
-    description: "Formação acadêmica completa em Ciência da Computação, com foco em desenvolvimento de software, algoritmos e estruturas de dados.",
+    description: "Formação acadêmica em Ciência da Computação, com foco em desenvolvimento de software, algoritmos e estruturas de dados.",
     documents: [
       {
         name: "Diploma",

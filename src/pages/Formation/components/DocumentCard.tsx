@@ -28,19 +28,15 @@ export function DocumentCard({ document, animationDelay }: DocumentCardProps) {
          </div>
          <div className="flex flex-wrap gap-2">
             <Button
-               variant="outline"
-               size="sm"
                onClick={() => handleView(document.file)}
-               className="flex-1 sm:flex-initial transition-transform duration-300 hover:scale-105 active:scale-95"
+               className="flex-1 sm:flex-initial bg-primary hover:bg-primary/90 cursor-pointer"
             >
                <FileText className="h-4 w-4 mr-2" />
                Visualizar
             </Button>
             <Button
-               variant="outline"
-               size="sm"
                onClick={() => handleDownload(document.file, document.name)}
-               className="flex-1 sm:flex-initial transition-transform duration-300 hover:scale-105 active:scale-95"
+               className="flex-1 sm:flex-initial bg-primary hover:bg-primary/90 cursor-pointer"
             >
                <Download className="h-4 w-4 mr-2" />
                Baixar
