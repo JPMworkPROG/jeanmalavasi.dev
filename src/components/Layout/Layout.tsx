@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <nav className="container mx-auto px-6 py-6">
                <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-0">
                   <Link to="/" className="text-2xl font-bold font-mono">
-                     Jean<span className="text-primary">Malavasi</span>
+                     JeanMalavasi<span className="text-primary">.dev</span>
                   </Link>
                   <HeaderDesktopNavigation navigation={navigation} currentPath={location.pathname} />
                   <HeaderMobileNavigation navigation={navigation} currentPath={location.pathname} />
