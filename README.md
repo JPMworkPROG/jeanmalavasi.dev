@@ -63,7 +63,7 @@ A aplicação possui as seguintes rotas:
 
 **Jean Malavasi**
 
-- Portfólio: [jeanmalavasi.dev](https://jp-portfolio-a6ed70d309e6.herokuapp.com/contacts)
+- Portfólio: [jeanmalavasi.dev](https://www.jeanmalavasidev.com.br/)
 - GitHub: [@jeanmalavasi](https://github.com/jeanmalavasi)
 - Linkedin: [@jeanmalavasi](https://www.linkedin.com/in/jeanpintomalavasi/)
 
