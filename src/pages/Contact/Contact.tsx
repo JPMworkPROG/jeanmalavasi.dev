@@ -9,7 +9,7 @@ export default function Contact() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 py-16" key={i18n.language}>
+    <section className="container mx-auto px-6 py-16" key={i18n.language}>
       <ContactHeader header={getContactHeader(t)} />
 
       <div className="grid gap-8 sm:gap-12 grid-cols-1 lg:grid-cols-[1.2fr_1fr] lg:items-start">
@@ -20,6 +20,6 @@ export default function Contact() {
           <ContactLocationAndAvailability locationAndAvailability={getLocationAndAvailability(t)} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

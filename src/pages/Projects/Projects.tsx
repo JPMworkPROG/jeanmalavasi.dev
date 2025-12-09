@@ -7,7 +7,7 @@ import { getProjects, getProjectsHeader } from "./data";
 import { PAGINATION_CONFIG, getPaginatedItems } from "@/lib/pagination";
 
 export default function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const search = useSearch({ from: "/projects" });
   const currentPage = search.page ?? PAGINATION_CONFIG.DEFAULT_PAGE;
   const projects = getProjects(t);
@@ -19,7 +19,7 @@ export default function Projects() {
   );
 
   return (
-    <section className="container mx-auto px-6 py-16 flex flex-col">
+    <section className="container mx-auto px-6 py-16 flex flex-col" key={i18n.language}>
       <ProjectsHeader header={getProjectsHeader(t)} />
 
       <div className="flex-1 grid gap-8 mb-10 min-h-160 mt-6">

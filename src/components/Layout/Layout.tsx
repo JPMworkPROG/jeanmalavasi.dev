@@ -3,7 +3,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { DesktopNavigation as HeaderDesktopNavigation } from "@/components/header/DesktopNavigation";
 import { MobileNavigation as HeaderMobileNavigation } from "@/components/header/MobileNavigation";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher/LanguageSwitcher";
+import { LanguageSwitcher } from "@/components/header/LanguageSwitcher";
 import { useLanguageTransition } from "@/contexts/LanguageTransitionContext";
 import type { NavigationItem } from "@/components/header/types";
 import "./Layout.css";

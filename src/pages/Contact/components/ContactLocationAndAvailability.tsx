@@ -10,7 +10,7 @@ export function ContactLocationAndAvailability({ locationAndAvailability }: Loca
   const buttonClass = "transition-transform duration-300 hover:scale-105 active:scale-95";
 
   return (
-    <Card className="border-border/60 bg-card p-4 sm:p-8 space-y-6 opacity-0 animate-fade-in animation-delay-1000">
+    <Card className="border-border/60 bg-card p-4 sm:p-8 opacity-0 animate-fade-in animation-delay-1000">
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold">{locationAndAvailability.title}</h2>
         <p className="text-muted-foreground">{locationAndAvailability.description}</p>

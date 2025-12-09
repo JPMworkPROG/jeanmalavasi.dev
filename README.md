@@ -25,8 +25,7 @@ jeanmalavasi.dev/
 │   ├── components/         # Componentes reutilizáveis
 │   │   ├── header/         # Componentes de navegação
 │   │   ├── ui/             # Componentes UI base (Button, Card, Badge)
-│   │   ├── Layout/         # Layout principal da aplicação
-│   │   └── ProfileFrame/   # Componente de perfil
+│   │   └── Layout/         # Layout principal da aplicação
 │   ├── lib/                # Utilitários e helpers
 │   │   ├── utils.ts        # Funções utilitárias
 │   │   └── pagination.ts   # Lógica de paginação

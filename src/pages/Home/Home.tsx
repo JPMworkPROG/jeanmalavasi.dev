@@ -9,14 +9,14 @@ export default function Home() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="container mx-auto px-6 py-16" key={i18n.language}>
+    <section className="container mx-auto px-6 py-16" key={i18n.language}>
       <HeroSection socialLinks={socialLinks} heroData={getHeroData(t)} />
 
-      <section className="mt-20 space-y-16">
+      <div className="mt-20 space-y-16">
         <ManifestoSection manifestoData={getManifestoData(t)} pillars={getManifestoPillars(t)} />
         <StackMindsetSection items={getStackMindset(t)} />
         <SkillsSection skills={getSkills(t)} />
+      </div>
       </section>
-    </div>
   );
 }

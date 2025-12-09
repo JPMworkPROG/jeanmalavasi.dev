@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { MethodToggle } from "./MethodToggle";
@@ -44,8 +46,6 @@ export function ContactForm({ formData }: ContactFormProps) {
     });
   };
 
-  const inputClass = "w-full rounded-md border border-border bg-input px-4 py-2 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20";
-
   return (
     <div className="opacity-0 animate-fade-in-up-scroll animation-delay-500">
       <Card className="border-border/60 bg-card p-4 sm:p-8 space-y-5">
@@ -59,12 +59,11 @@ export function ContactForm({ formData }: ContactFormProps) {
             <label htmlFor="name" className="text-sm font-medium">
               {t('contact.form.fields.name.label')}
             </label>
-            <input
+            <Input
               type="text"
               id="name"
               name="name"
               required
-              className={inputClass}
               placeholder={t('contact.form.fields.name.placeholder')}
             />
           </div>
@@ -73,12 +72,11 @@ export function ContactForm({ formData }: ContactFormProps) {
             <label htmlFor="email" className="text-sm font-medium">
               {t('contact.form.fields.email.label')}
             </label>
-            <input
+            <Input
               type="email"
               id="email"
               name="email"
               required
-              className={inputClass}
               placeholder={t('contact.form.fields.email.placeholder')}
             />
           </div>
@@ -87,12 +85,11 @@ export function ContactForm({ formData }: ContactFormProps) {
             <label htmlFor="subject" className="text-sm font-medium">
               {t('contact.form.fields.subject.label')}
             </label>
-            <input
+            <Input
               type="text"
               id="subject"
               name="subject"
               required
-              className={inputClass}
               placeholder={t('contact.form.fields.subject.placeholder')}
             />
           </div>
@@ -101,12 +98,11 @@ export function ContactForm({ formData }: ContactFormProps) {
             <label htmlFor="message" className="text-sm font-medium">
               {t('contact.form.fields.message.label')}
             </label>
-            <textarea
+            <Textarea
               id="message"
               name="message"
               required
               rows={4}
-              className={`${inputClass} resize-none`}
               placeholder={t('contact.form.fields.message.placeholder')}
             />
           </div>

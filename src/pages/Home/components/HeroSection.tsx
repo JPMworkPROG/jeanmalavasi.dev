@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Code2 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import { ProfileFrame } from "@/components/ProfileFrame/ProfileFrame";
+import { ProfileFrame } from "./ProfileFrame/ProfileFrame";
 import { SocialLinks } from "./SocialLinks";
 import type { SocialLink, HeroData } from "../data";
 
@@ -25,8 +25,8 @@ export function HeroSection({ socialLinks, heroData }: HeroSectionProps) {
           {heroData.description}
         </p>
         <div className="flex items-center gap-4 opacity-0 animate-fade-in-up animation-delay-700">
-          <Button className="bg-primary hover:bg-primary/90">
-            <Link to={heroData.buttonLink} className="flex items-center justify-center">
+          <Button className="bg-primary hover:bg-primary/90" asChild>
+            <Link to={heroData.buttonLink}>
               <Code2 className="mr-2 h-4 w-4" />
               {heroData.buttonText}
             </Link>
