@@ -40,18 +40,23 @@ export interface ContactFormData {
   message: string;
 }
 
+export interface ContactSubmissionMessages {
+  whatsapp: string;
+  emailBody: string;
+}
+
 export function handleContactSubmit(
   formData: ContactFormData,
   method: "email" | "whatsapp",
   email: string,
-  whatsappNumber: string
+  whatsappNumber: string,
+  messages: ContactSubmissionMessages
 ): void {
   if (method === "whatsapp") {
-    const whatsappMessage = `*${formData.subject}*\n\nOlá, meu nome é ${formData.name} (${formData.email})\n\n${formData.message}`;
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messages.whatsapp)}`;
     window.open(whatsappLink, "_blank");
   } else {
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`De: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(messages.emailBody)}`;
     window.location.href = mailtoLink;
   }
 }

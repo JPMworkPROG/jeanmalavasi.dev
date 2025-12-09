@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { TFunction } from "i18next";
 import { FileText, GraduationCap } from "lucide-react";
 
 export interface FormationHeader {
@@ -7,7 +8,7 @@ export interface FormationHeader {
   description: string;
 }
 
-export const getFormationHeader = (t: (key: string) => string): FormationHeader => ({
+export const getFormationHeader = (t: TFunction): FormationHeader => ({
   label: t('formation.header.label'),
   title: t('formation.header.title'),
   description: t('formation.header.description'),
@@ -30,7 +31,7 @@ export interface Formation {
   documents: Document[];
 }
 
-export const getFormations = (t: (key: string) => string): Formation[] => [
+export const getFormations = (t: TFunction): Formation[] => [
   {
     title: t('formation.computerScience.title'),
     degree: t('formation.computerScience.degree'),
@@ -54,4 +55,3 @@ export const getFormations = (t: (key: string) => string): Formation[] => [
     ],
   },
 ];
-

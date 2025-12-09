@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { TFunction } from "i18next";
 import { GrPowerCycle } from "react-icons/gr";
 import {
   SiDocker,
@@ -19,7 +20,7 @@ export interface ProjectsHeader {
   description: string;
 }
 
-export const getProjectsHeader = (t: (key: string) => string): ProjectsHeader => ({
+export const getProjectsHeader = (t: TFunction): ProjectsHeader => ({
   label: t('projects.header.label'),
   title: t('projects.header.title'),
   description: t('projects.header.description'),
@@ -42,7 +43,7 @@ export interface Project {
   docsUrl?: string;
 }
 
-export const getProjects = (t: (key: string) => string): Project[] => [
+export const getProjects = (t: TFunction): Project[] => [
   {
     title: t('projects.todoManager.title'),
     description: t('projects.todoManager.description'),
@@ -107,4 +108,3 @@ export const getProjects = (t: (key: string) => string): Project[] => [
     imageAlt: t('projects.genericRestClient.imageAlt'),
   },
 ];
-

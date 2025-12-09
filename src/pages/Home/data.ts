@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { TFunction } from "i18next";
 import { Compass, Gauge, Layers, GitBranch, Shapes, Shield, Building, TestTube, Workflow, Github, Linkedin } from "lucide-react";
 import {
   SiJavascript,
@@ -38,7 +39,7 @@ export interface HeroData {
   };
 }
 
-export const getHeroData = (t: (key: string) => string): HeroData => ({
+export const getHeroData = (t: TFunction): HeroData => ({
   subtitle: t('home.hero.subtitle'),
   titlePrefix: t('home.hero.titlePrefix'),
   name: t('home.hero.name'),
@@ -62,7 +63,7 @@ export interface ManifestoData {
   };
 }
 
-export const getManifestoData = (t: (key: string) => string): ManifestoData => ({
+export const getManifestoData = (t: TFunction): ManifestoData => ({
   label: t('home.manifesto.label'),
   title: t('home.manifesto.title'),
   description: t('home.manifesto.description'),
@@ -76,7 +77,7 @@ export const getManifestoData = (t: (key: string) => string): ManifestoData => (
   },
 });
 
-export const getManifestoPillars = (t: (key: string) => string): string[] => [
+export const getManifestoPillars = (t: TFunction): string[] => [
   t('home.manifesto.pillars.0'),
   t('home.manifesto.pillars.1'),
   t('home.manifesto.pillars.2'),
@@ -88,7 +89,7 @@ export interface StackMindsetItem {
   Icon: ComponentType<{ className?: string }>;
 }
 
-export const getStackMindset = (t: (key: string) => string): StackMindsetItem[] => [
+export const getStackMindset = (t: TFunction): StackMindsetItem[] => [
   {
     title: t('home.stackMindset.endToEnd.title'),
     description: t('home.stackMindset.endToEnd.description'),
@@ -123,7 +124,7 @@ export interface Skills {
   principles: SkillItem[];
 }
 
-export const getSkills = (t: (key: string) => string): Skills => ({
+export const getSkills = (t: TFunction): Skills => ({
   languages: [
     { name: t('home.skills.languages.0.name'), level: t('home.skills.languages.0.level') },
     { name: t('home.skills.languages.1.name'), level: t('home.skills.languages.1.level') },
@@ -184,4 +185,3 @@ export const socialLinks: SocialLink[] = [
     Icon: Linkedin,
   }
 ];
-

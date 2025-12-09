@@ -21,11 +21,11 @@ export default function Layout({ children }: { children: ReactNode }) {
       { name: t('nav.contact'), href: "/contacts" },
    ];
 
-   const mainClassName = isTransitioning 
-      ? 'language-transitioning' 
-      : justTransitioned 
-      ? 'language-transitioned' 
-      : '';
+   const languageTranstion = isTransitioning
+      ? 'language-transitioning'
+      : justTransitioned
+         ? 'language-transitioned'
+         : '';
 
    return (
       <div className={`min-h-screen bg-background language-transition ${isTransitioning ? 'transitioning' : ''}`}>
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                </div>
             </nav>
          </header>
-         <main className={mainClassName}>{children}</main>
+         <main className={languageTranstion}>{children}</main>
       </div>
    );
 }

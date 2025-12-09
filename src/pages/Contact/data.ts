@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { TFunction } from "i18next";
 import { Mail, MapPin, Clock, MessageCircle, Linkedin, Instagram } from "lucide-react";
 
 export interface ContactHeader {
@@ -7,7 +8,7 @@ export interface ContactHeader {
   description: string;
 }
 
-export const getContactHeader = (t: (key: string) => string): ContactHeader => ({
+export const getContactHeader = (t: TFunction): ContactHeader => ({
   label: t('contact.header.label'),
   title: t('contact.header.title'),
   description: t('contact.header.description'),
@@ -26,7 +27,7 @@ export interface ContactInfo {
   items: ContactInfoItem[];
 }
 
-export const getContactInfo = (t: (key: string) => string): ContactInfo => ({
+export const getContactInfo = (t: TFunction): ContactInfo => ({
   title: t('contact.contactInfo.title'),
   description: t('contact.contactInfo.description'),
   items: [
@@ -70,7 +71,7 @@ export interface LocationAndAvailability {
   items: LocationAndAvailabilityItems[];
 }
 
-export const getLocationAndAvailability = (t: (key: string) => string): LocationAndAvailability => ({
+export const getLocationAndAvailability = (t: TFunction): LocationAndAvailability => ({
   title: t('contact.locationAndAvailability.title'),
   description: t('contact.locationAndAvailability.description'),
   items: [
@@ -94,10 +95,9 @@ export interface FormData {
   whatsappNumber: string;
 }
 
-export const getFormData = (t: (key: string) => string): FormData => ({
+export const getFormData = (t: TFunction): FormData => ({
   title: t('contact.form.title'),
   description: t('contact.form.description'),
   email: t('contact.form.email'),
   whatsappNumber: t('contact.form.whatsappNumber'),
 });
-

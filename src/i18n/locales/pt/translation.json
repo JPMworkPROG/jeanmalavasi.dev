@@ -6,6 +6,16 @@
     "projects": "Projetos",
     "contact": "Contato"
   },
+  "languageSwitcher": {
+    "ariaLabel": {
+      "switchToEnglish": "Mudar para inglês",
+      "switchToPortuguese": "Mudar para português"
+    },
+    "flags": {
+      "portugueseAlt": "Bandeira do Brasil",
+      "englishAlt": "Bandeira dos Estados Unidos"
+    }
+  },
   "home": {
     "hero": {
       "subtitle": "Desenvolvedor Full Stack",
@@ -139,6 +149,10 @@
       "method": {
         "email": "E-mail",
         "whatsapp": "WhatsApp"
+      },
+      "templates": {
+        "whatsapp": "*{{subject}}*\n\nOlá, meu nome é {{name}} ({{email}})\n\n{{message}}",
+        "emailBody": "De: {{name}} ({{email}})\n\n{{message}}"
       }
     },
     "contactInfo": {
@@ -184,6 +198,11 @@
       "accessApp": "Acessar aplicação",
       "viewCode": "Ver código",
       "openApiDocs": "OpenAPI Docs"
+    },
+    "pagination": {
+      "range": "Mostrando <strong>{{start}}</strong> a <strong>{{end}}</strong> de <strong>{{total}}</strong> projetos",
+      "previous": "Anterior",
+      "next": "Próximo"
     },
     "todoManager": {
       "title": "TodoManager — Planejamento de Demandas",

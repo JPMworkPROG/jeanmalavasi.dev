@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import type { TFunction } from "i18next";
 import {
   SiJavascript,
   SiTypescript,
@@ -21,7 +22,7 @@ export interface ResumeHeader {
   description: string;
 }
 
-export const getResumeHeader = (t: (key: string) => string): ResumeHeader => ({
+export const getResumeHeader = (t: TFunction): ResumeHeader => ({
   label: t('resume.header.label'),
   title: t('resume.header.title'),
   description: t('resume.header.description'),
@@ -39,7 +40,7 @@ export interface Experience {
   skills: string[];
 }
 
-export const getExperience = (t: (key: string) => string): Experience[] => [
+export const getExperience = (t: TFunction): Experience[] => [
   {
     company: t('resume.experience.senseup.company'),
     position: t('resume.experience.senseup.position'),
@@ -75,4 +76,3 @@ export const skillIcons: SkillIconsRecord = {
   "Spring Boot": SiSpring,
   "Docker": SiDocker,
 };
-

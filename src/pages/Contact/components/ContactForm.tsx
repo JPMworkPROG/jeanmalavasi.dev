@@ -25,7 +25,23 @@ export function ContactForm({ formData }: ContactFormProps) {
       message: formDataObj.get("message") as string,
     };
 
-    handleContactSubmit(contactData, method, formData.email, formData.whatsappNumber);
+    const whatsappMessage = t('contact.form.templates.whatsapp', {
+      subject: contactData.subject,
+      name: contactData.name,
+      email: contactData.email,
+      message: contactData.message,
+    });
+
+    const emailBody = t('contact.form.templates.emailBody', {
+      name: contactData.name,
+      email: contactData.email,
+      message: contactData.message,
+    });
+
+    handleContactSubmit(contactData, method, formData.email, formData.whatsappNumber, {
+      whatsapp: whatsappMessage,
+      emailBody,
+    });
   };
 
   const inputClass = "w-full rounded-md border border-border bg-input px-4 py-2 text-sm transition-colors focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20";
@@ -106,4 +122,3 @@ export function ContactForm({ formData }: ContactFormProps) {
     </div>
   );
 }
-

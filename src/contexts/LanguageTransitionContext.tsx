@@ -1,12 +1,14 @@
-import { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { SupportedLanguage } from '@/i18n/config';
+import { normalizeLanguage } from '@/i18n/config';
 
 interface LanguageTransitionContextType {
   isTransitioning: boolean;
   justTransitioned: boolean;
-  changeLanguage: (newLanguage: string) => Promise<void>;
-  currentLanguage: string;
+  changeLanguage: (newLanguage: SupportedLanguage) => Promise<void>;
+  currentLanguage: SupportedLanguage;
 }
 
 const LanguageTransitionContext = createContext<LanguageTransitionContextType | undefined>(undefined);
@@ -23,22 +25,22 @@ export function LanguageTransitionProvider({ children }: { children: ReactNode }
     }
   }, [justTransitioned]);
 
+  const currentLanguage = useMemo(
+    () => normalizeLanguage(i18n.language),
+    [i18n.language]
+  );
+
   const changeLanguage = useCallback(
-    async (newLanguage: string) => {
-      if (isTransitioning || i18n.language === newLanguage) {
+    async (newLanguage: SupportedLanguage) => {
+      if (isTransitioning || normalizeLanguage(i18n.language) === newLanguage) {
         return;
       }
 
       setIsTransitioning(true);
       setJustTransitioned(false);
 
-      // Aguarda a animação de fade out (200ms)
       await new Promise((resolve) => setTimeout(resolve, 200));
-
-      // Muda o idioma
       await i18n.changeLanguage(newLanguage);
-
-      // Aguarda um pequeno delay para garantir que o conteúdo foi atualizado
       await new Promise((resolve) => setTimeout(resolve, 50));
 
       setIsTransitioning(false);
@@ -53,7 +55,7 @@ export function LanguageTransitionProvider({ children }: { children: ReactNode }
         isTransitioning,
         justTransitioned,
         changeLanguage,
-        currentLanguage: i18n.language,
+        currentLanguage,
       }}
     >
       {children}
@@ -68,4 +70,3 @@ export function useLanguageTransition() {
   }
   return context;
 }
-

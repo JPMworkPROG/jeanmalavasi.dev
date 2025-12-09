@@ -6,6 +6,16 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+  "languageSwitcher": {
+    "ariaLabel": {
+      "switchToEnglish": "Switch to English",
+      "switchToPortuguese": "Switch to Portuguese"
+    },
+    "flags": {
+      "portugueseAlt": "Brazil flag",
+      "englishAlt": "USA flag"
+    }
+  },
   "home": {
     "hero": {
       "subtitle": "Full Stack Developer",
@@ -139,6 +149,10 @@
       "method": {
         "email": "Email",
         "whatsapp": "WhatsApp"
+      },
+      "templates": {
+        "whatsapp": "*{{subject}}*\n\nHello, my name is {{name}} ({{email}})\n\n{{message}}",
+        "emailBody": "From: {{name}} ({{email}})\n\n{{message}}"
       }
     },
     "contactInfo": {
@@ -184,6 +198,11 @@
       "accessApp": "Access application",
       "viewCode": "View code",
       "openApiDocs": "OpenAPI Docs"
+    },
+    "pagination": {
+      "range": "Showing <strong>{{start}}</strong> to <strong>{{end}}</strong> of <strong>{{total}}</strong> projects",
+      "previous": "Previous",
+      "next": "Next"
     },
     "todoManager": {
       "title": "TodoManager — Demand Planning",

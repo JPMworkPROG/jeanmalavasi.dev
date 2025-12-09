@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "@tanstack/react-router";
 import { PAGINATION_CONFIG } from "@/lib/pagination";
+import { Trans, useTranslation } from "react-i18next";
 
 interface ProjectsPaginationProps {
    currentPage: number;
@@ -17,6 +18,7 @@ export function ProjectsPagination({
    totalItems,
 }: ProjectsPaginationProps) {
    const navigate = useNavigate({ from: "/projects" });
+   const { t } = useTranslation();
 
    const handlePageChange = (newPage: number) => {
       if (newPage < PAGINATION_CONFIG.MIN_PAGE || newPage > totalPages) return;
@@ -38,9 +40,11 @@ export function ProjectsPagination({
    return (
       <div className="flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-8 sm:flex-row">
          <p className="text-sm text-muted-foreground">
-            Mostrando <span className="font-medium">{startItem}</span> a{" "}
-            <span className="font-medium">{endItem}</span> de{" "}
-            <span className="font-medium">{totalItems}</span> projetos
+            <Trans
+               i18nKey="projects.pagination.range"
+               values={{ start: startItem, end: endItem, total: totalItems }}
+               components={{ strong: <span className="font-medium" /> }}
+            />
          </p>
 
          <div className="flex items-center gap-2">
@@ -52,7 +56,7 @@ export function ProjectsPagination({
                className="transition-transform duration-200 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
                <ChevronLeft className="h-4 w-4" />
-               <span className="sr-only sm:not-sr-only sm:ml-1">Anterior</span>
+               <span className="sr-only sm:not-sr-only sm:ml-1">{t('projects.pagination.previous')}</span>
             </Button>
 
             <div className="flex items-center gap-1">
@@ -91,7 +95,7 @@ export function ProjectsPagination({
                disabled={currentPage === totalPages}
                className="transition-transform duration-200 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
-               <span className="sr-only sm:not-sr-only sm:mr-1">Próximo</span>
+               <span className="sr-only sm:not-sr-only sm:mr-1">{t('projects.pagination.next')}</span>
                <ChevronRight className="h-4 w-4" />
             </Button>
          </div>
