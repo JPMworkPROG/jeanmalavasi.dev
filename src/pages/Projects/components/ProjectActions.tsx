@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { SiOpenapiinitiative } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 import type { Project } from "../data";
 
 interface ProjectActionsProps {
@@ -10,6 +11,7 @@ interface ProjectActionsProps {
 }
 
 export function ProjectActions({ project, baseDelay, projectIndex }: ProjectActionsProps) {
+  const { t } = useTranslation();
   const buttonClass = "transition-transform duration-300 hover:scale-105 active:scale-95";
 
   return (
@@ -21,7 +23,7 @@ export function ProjectActions({ project, baseDelay, projectIndex }: ProjectActi
         <Button asChild>
           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="h-4 w-4" />
-            Acessar aplicação
+            {t('projects.actions.accessApp')}
           </a>
         </Button>
       </div>
@@ -29,7 +31,7 @@ export function ProjectActions({ project, baseDelay, projectIndex }: ProjectActi
         <Button asChild>
           <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
             <Github className="h-4 w-4" />
-            Ver código
+            {t('projects.actions.viewCode')}
           </a>
         </Button>
       </div>
@@ -38,7 +40,7 @@ export function ProjectActions({ project, baseDelay, projectIndex }: ProjectActi
           <Button asChild>
             <a href={project.docsUrl} target="_blank" rel="noopener noreferrer">
               <SiOpenapiinitiative className="h-4 w-4" aria-hidden="true" />
-              OpenAPI Docs
+              {t('projects.actions.openApiDocs')}
             </a>
           </Button>
         </div>

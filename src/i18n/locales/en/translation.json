@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "home": "Home",
+    "resume": "Resume",
+    "formation": "Education",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Full Stack Developer",
+      "titlePrefix": "Hello, I'm",
+      "name": "Jean Malavasi",
+      "description": "Specialist in creating elegant digital experiences and system integration, connecting APIs, services, and data with modern web technologies.",
+      "buttonText": "My Projects",
+      "buttonLink": "/projects",
+      "profileImageAlt": "Jean Malavasi profile"
+    },
+    "manifesto": {
+      "label": "Manifesto",
+      "title": "I build products with intention and responsibility",
+      "description": "Every delivery must generate learning and measurable impact. I follow through from conception to maintenance, integrating different systems and domains without losing sight of quality and reliability.",
+      "collaborationCard": {
+        "label": "How I collaborate",
+        "paragraphs": [
+          "I work on both frontend and backend, creating interfaces that communicate with APIs. I participate in discovery, facilitate handoffs, thus enabling development through system delivery.",
+          "I value clear communication and autonomy: I communicate status clearly, anticipate bottlenecks, and create living documentation for faster onboarding."
+        ],
+        "signature": "— Jean Malavasi"
+      },
+      "pillars": [
+        "Work guided by product metrics and business impact.",
+        "Close partnership with design and stakeholders to reduce rework.",
+        "Requirements gathering → development → testing → deployment → monitoring → short feedback loops."
+      ]
+    },
+    "stackMindset": {
+      "endToEnd": {
+        "title": "End-to-End Delivery",
+        "description": "I plan, develop, and monitor complete releases, from requirements gathering to monitored go-live."
+      },
+      "frontend": {
+        "title": "Frontend focused on user experience",
+        "description": "Accessible and performant interfaces, with smooth animations and scalable componentization."
+      },
+      "backend": {
+        "title": "Scalable and observable backend",
+        "description": "Typed APIs, monitored, with actionable logs and metrics, to ensure system quality and performance."
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "Technical competencies",
+      "sections": {
+        "languages": "Languages",
+        "technologies": "Technologies",
+        "frameworks": "Frameworks",
+        "principles": "Principles"
+      },
+      "languages": [
+        {
+          "name": "Portuguese",
+          "level": "Native"
+        },
+        {
+          "name": "English",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Spanish",
+          "level": "Intermediate"
+        }
+      ]
+    }
+  },
+  "resume": {
+    "header": {
+      "label": "Professional Resume",
+      "title": "Experience and Skills",
+      "description": "",
+      "downloadButton": "Download"
+    },
+    "labels": {
+      "location": "Location",
+      "type": "Type",
+      "period": "Period",
+      "achievements": "Achievements",
+      "skills": "Skills"
+    },
+    "experience": {
+      "senseup": {
+        "company": "SenseUp",
+        "position": "Fullstack Developer",
+        "location": "Vitória, Espírito Santo, Brazil · Remote",
+        "type": "Full-time",
+        "startDate": "Jul 2021",
+        "endDate": "Present",
+        "duration": "4 years 6 months",
+        "achievements": {
+          "0": "Designed and implemented a critical alarm monitoring system in an IoT environment, processing +500k monthly events, integrating business rules and automated notifications — reducing undetected critical failures by 80% and decreasing average response time from 3–5 hours to ~20 minutes.",
+          "1": "Redesigned the MSSQL database architecture to a model optimized for hierarchical data and restructured the backend to operate on the new structure, reducing average complex query time from 2m10s to 35s (~73% reduction) and improving heavy operation performance by up to 4×.",
+          "2": "Developed and documented integrations between legacy systems for managing locations, machines, and inspection points and the IoT platform, creating REST APIs that process +2 million records/month. The solution eliminated discrepancies between databases, ensured real-time synchronization (<1s) and increased operational data reliability by >95%.",
+          "3": "Implemented two critical telemetry pipelines, integrating Dynapredict and PI System, supporting +10k measurements/hour, with dynamic ID mapping, duplicate filtering, batch formatting, and resilient sending via APIs. The solution increased successful delivery rate to 99.8%, reduced ingestion failures by >90%, and enabled complete monitoring via Prometheus."
+        }
+      }
+    }
+  },
+  "contact": {
+    "header": {
+      "label": "Get in touch",
+      "title": "Let's talk?",
+      "description": "I'm open to discussing opportunities, projects, or just exchanging ideas about technology and development."
+    },
+    "form": {
+      "title": "Send a message",
+      "description": "Fill out the form below and I'll get back to you as soon as possible.",
+      "email": "jpm.work.prog@gmail.com",
+      "whatsappNumber": "5527995892226",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "What would you like to talk about?"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell me more about your project or idea..."
+        }
+      },
+      "sendBy": "Send by",
+      "sendButton": "Send message",
+      "method": {
+        "email": "Email",
+        "whatsapp": "WhatsApp"
+      }
+    },
+    "contactInfo": {
+      "title": "Contact information",
+      "description": "You can also find me through these channels.",
+      "email": {
+        "label": "Email",
+        "value": "jpm.work.prog@gmail.com"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "+55 (27) 99589-2226"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/jeanpintomalavasi"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "value": "@jpizi"
+      }
+    },
+    "locationAndAvailability": {
+      "title": "Location and availability",
+      "description": "Better understand my work context and schedule.",
+      "location": {
+        "label": "Location",
+        "value": "Espírito Santo, Brazil, GMT-3"
+      },
+      "availability": {
+        "label": "Availability",
+        "value": "Remote first • Available for international syncs"
+      }
+    }
+  },
+  "projects": {
+    "header": {
+      "label": "Portfolio",
+      "title": "Featured Projects",
+      "description": "Curated selection with studies and professional deliveries that demonstrate my work as a full stack developer, always aligned with best practices and product focus."
+    },
+    "actions": {
+      "accessApp": "Access application",
+      "viewCode": "View code",
+      "openApiDocs": "OpenAPI Docs"
+    },
+    "todoManager": {
+      "title": "TodoManager — Demand Planning",
+      "description": "Full stack application that orchestrates Latinhas LLC's production planning, combining an Express + Prisma API documented in OpenAPI with a responsive Next.js interface ready for corporate use.",
+      "highlights": [
+        "Frontend in Next.js 14 with React Hook Form, TanStack Query, and native dark mode.",
+        "Modular backend in Express 4 + Prisma 5, centralized validations, structured logging, and public OpenAPI for partner squads.",
+        "Complete CRUD for demands and SKUs with validations, pagination, and cascade deletion.",
+        "Containerized integration with Docker and pipeline ready for multiple environments."
+      ],
+      "imageAlt": "Animated demonstration of TodoManager showing the demand flow"
+    },
+    "restora": {
+      "title": "Restora — Landing Page",
+      "description": "Cosmetics brand landing page developed with a focus on user experience, consistent visual identity, and high performance.",
+      "highlights": [
+        "Developed with Next.js 15, leveraging the framework's latest features for low Time to First Byte (TTFB) latencies.",
+        "Modern and responsive design, resulting in a more fluid and optimized navigation.",
+        "Conversion-optimized interface, seeking to optimize dwell time and reduce bounce rate.",
+        "Fully responsive architecture, ensuring loading below 1.2s in 98% of tested resolutions."
+      ],
+      "imageAlt": "Animated demonstration of the Restora landing page showing the natural cosmetics brand's visual identity"
+    },
+    "genericRestClient": {
+      "title": "GenericRestClient - Generic HTTP REST client",
+      "description": "Generic REST client for .NET 9.0 with support for authentication, rate limiting, and automatic retry. Developed as a solution for integrating with REST APIs in a resilient and configurable way.",
+      "highlights": [
+        "Flexible authentication with support for Bearer Token, OAuth2 (with automatic refresh) and API Key via header or query string.",
+        "Configurable rate limiting with requests per minute control, automatic queue, and handling of exceeded limits.",
+        "Intelligent automatic retry for 429 and 5xx codes, with support for Retry-After header and configurable exponential or linear backoff.",
+        "Robust resilience using Polly for automatic handling of transient failures (timeout, DNS, etc.) and complete HTTP operations (GET, POST, PUT, DELETE)."
+      ],
+      "imageAlt": "Demonstration of GenericRestClient showing authentication, rate limiting, and automatic retry features"
+    }
+  },
+  "formation": {
+    "header": {
+      "label": "Academic Education",
+      "title": "Education and Certifications",
+      "description": "Official documents of my academic education and professional certifications."
+    },
+    "labels": {
+      "institution": "Institution",
+      "period": "Period",
+      "documents": "Documents",
+      "pdfDocument": "PDF Document",
+      "view": "View",
+      "download": "Download"
+    },
+    "computerScience": {
+      "title": "Computer Science",
+      "degree": "Bachelor's Degree",
+      "institution": "Universidade de Vila Velha - UVV",
+      "startDate": "January 2019",
+      "endDate": "January 2023",
+      "description": "Academic education in Computer Science, with a focus on software development, algorithms, and data structures.",
+      "documents": {
+        "diploma": {
+          "name": "Diploma",
+          "file": "/formation/diploma.pdf"
+        },
+        "transcript": {
+          "name": "Academic Transcript",
+          "file": "/formation/historicoFaculdade.pdf"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved to another address.",
+    "backToHome": "Back to Home",
+    "viewProjects": "View Projects"
+  }
+}

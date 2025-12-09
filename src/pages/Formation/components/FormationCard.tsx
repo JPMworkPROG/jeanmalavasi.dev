@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Calendar, Building2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { FormationInfoItem } from "./FormationInfoItem";
 import { DocumentCard } from "./DocumentCard";
 import type { Formation } from "../data";
@@ -11,6 +12,7 @@ interface FormationCardProps {
 }
 
 export function FormationCard({ formation, index }: FormationCardProps) {
+   const { t } = useTranslation();
    const baseDelay = ANIMATION_DELAYS.LONG;
    const increment = ANIMATION_DELAYS.SHORT;
    const documentBaseDelay = 1.1;
@@ -37,10 +39,10 @@ export function FormationCard({ formation, index }: FormationCardProps) {
                   className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 opacity-0 animate-fade-in"
                   style={{ animationDelay: getAnimationDelay(baseDelay + 0.3, index, increment) }}
                >
-                  <FormationInfoItem icon={Building2} label="Instituição" value={formation.institution} />
+                  <FormationInfoItem icon={Building2} label={t('formation.labels.institution')} value={formation.institution} />
                   <FormationInfoItem
                      icon={Calendar}
-                     label="Período"
+                     label={t('formation.labels.period')}
                      value={`${formation.startDate} - ${formation.endDate}`}
                   />
                </div>
@@ -50,7 +52,7 @@ export function FormationCard({ formation, index }: FormationCardProps) {
                   style={{ animationDelay: getAnimationDelay(baseDelay + 0.4, index, increment) }}
                >
                   <p className="text-xs font-semibold tracking-[0.3em] text-muted-foreground mb-4">
-                     Documentos
+                     {t('formation.labels.documents')}
                   </p>
                   <div className="grid gap-4 sm:grid-cols-2">
                      {formation.documents.map((doc, docIndex) => (

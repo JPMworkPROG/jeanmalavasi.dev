@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Calendar, MapPin, Briefcase } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { ExperienceInfoItem } from "./ExperienceInfoItem";
 import { AchievementsList } from "./AchievementsList";
 import { SkillsList } from "./SkillsList";
@@ -13,6 +14,7 @@ interface ExperienceCardProps {
 }
 
 export function ExperienceCard({ experience, index, skillIcons }: ExperienceCardProps) {
+   const { t } = useTranslation();
    const baseDelay = ANIMATION_DELAYS.BASE;
    const increment = ANIMATION_DELAYS.SHORT;
 
@@ -39,17 +41,17 @@ export function ExperienceCard({ experience, index, skillIcons }: ExperienceCard
                >
                   <ExperienceInfoItem
                      icon={MapPin}
-                     label="Localização"
+                     label={t('resume.labels.location')}
                      value={experience.location}
                   />
                   <ExperienceInfoItem
                      icon={Briefcase}
-                     label="Tipo"
+                     label={t('resume.labels.type')}
                      value={experience.type}
                   />
                   <ExperienceInfoItem
                      icon={Calendar}
-                     label="Período"
+                     label={t('resume.labels.period')}
                      value={
                         <>
                            {experience.startDate} - {experience.endDate}

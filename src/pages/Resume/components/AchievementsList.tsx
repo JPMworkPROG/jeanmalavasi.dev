@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 interface AchievementsListProps {
    achievements: string[];
 }
 
 export function AchievementsList({ achievements }: AchievementsListProps) {
+   const { t } = useTranslation();
+
    return (
       <div>
          <p className="text-xs font-semibold tracking-[0.3em] text-muted-foreground mb-4">
-            Realizações
+            {t('resume.labels.achievements')}
          </p>
          <ul className="space-y-3">
             {achievements.map((achievement) => (

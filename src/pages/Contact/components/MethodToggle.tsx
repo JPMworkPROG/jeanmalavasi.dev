@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 interface MethodToggleProps {
   method: "email" | "whatsapp";
@@ -7,9 +8,11 @@ interface MethodToggleProps {
 }
 
 export function MethodToggle({ method, onToggle }: MethodToggleProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="space-y-2">
-      <label className="text-sm font-medium">Enviar por</label>
+      <label className="text-sm font-medium">{t('contact.form.sendBy')}</label>
       <div className="flex items-center gap-3">
         <Mail className={`h-4 w-4 transition-colors ${method === "email" ? "text-primary" : "text-muted-foreground"}`} />
         <button
@@ -27,7 +30,7 @@ export function MethodToggle({ method, onToggle }: MethodToggleProps) {
         </button>
         <SiWhatsapp className={`h-4 w-4 transition-colors ${method === "whatsapp" ? "text-primary" : "text-muted-foreground"}`} />
         <span className="text-sm text-muted-foreground ml-1">
-          {method === "email" ? "E-mail" : "WhatsApp"}
+          {method === "email" ? t('contact.form.method.email') : t('contact.form.method.whatsapp')}
         </span>
       </div>
       <input type="hidden" name="method" value={method} />

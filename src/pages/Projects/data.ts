@@ -19,11 +19,11 @@ export interface ProjectsHeader {
   description: string;
 }
 
-export const projectsHeader: ProjectsHeader = {
-  label: "Portfolio",
-  title: "Projetos em Destaque",
-  description: "Seleção curada com estudos e entregas profissionais que demonstram minha atuação como desenvolvedor full stack, sempre alinhada a boas práticas e foco em produto.",
-};
+export const getProjectsHeader = (t: (key: string) => string): ProjectsHeader => ({
+  label: t('projects.header.label'),
+  title: t('projects.header.title'),
+  description: t('projects.header.description'),
+});
 
 export interface TechStackItem {
   label: string;
@@ -42,16 +42,15 @@ export interface Project {
   docsUrl?: string;
 }
 
-export const projects: Project[] = [
+export const getProjects = (t: (key: string) => string): Project[] => [
   {
-    title: "TodoManager — Planejamento de Demandas",
-    description:
-      "Aplicação full stack que orquestra o planejamento de produção da Latinhas LLC, combinando uma API Express + Prisma documentada em OpenAPI com uma interface Next.js responsiva pronta para uso corporativo.",
+    title: t('projects.todoManager.title'),
+    description: t('projects.todoManager.description'),
     highlights: [
-      "Frontend em Next.js 14 com React Hook Form, TanStack Query e dark mode nativo.",
-      "Backend modular em Express 4 + Prisma 5, validações centralizadas, logging estruturado e OpenAPI pública para squads parceiros.",
-      "CRUD completo de demandas e SKUs com validações, paginação e exclusão em cascata.",
-      "Integração containerizada com Docker e pipeline pronto para múltiplos ambientes.",
+      t('projects.todoManager.highlights.0'),
+      t('projects.todoManager.highlights.1'),
+      t('projects.todoManager.highlights.2'),
+      t('projects.todoManager.highlights.3'),
     ],
     techStack: [
       { label: "Next.js 14", Icon: SiNextdotjs },
@@ -67,18 +66,17 @@ export const projects: Project[] = [
     liveUrl: "https://todomanager-frontend-ed80ca3b976d.herokuapp.com/demand",
     repoUrl: "https://github.com/JPMworkPROG/TodoManager",
     imageSrc: "/projects/todoManager/front.gif",
-    imageAlt: "Demonstração animada do TodoManager exibindo o fluxo de demandas",
+    imageAlt: t('projects.todoManager.imageAlt'),
     docsUrl: "https://todomanager-backend-f0230eb77fe3.herokuapp.com/docs/",
   },
   {
-    title: "Restora — Landing Page",
-    description:
-      "Landing page da marca de cosméticos desenvolvida com foco em experiência do usuário, identidade visual consistente e alta performance.",
+    title: t('projects.restora.title'),
+    description: t('projects.restora.description'),
     highlights: [
-      "Desenvolvida com Next.js 15, aproveitando as features mais recentes do framework para baixas latências de Time to First Byte (TTFB).",
-      "Design moderno e responsivo, resultando em uma navegação mais fluida e otimizada.",
-      "Interface otimizada para conversão, buscando otimizar o tempo de permanência e reduzindo a taxa de rejeição.",
-      "Arquitetura totalmente responsiva, garantindo carregamento abaixo de 1,2s em 98% das resoluções testadas."
+      t('projects.restora.highlights.0'),
+      t('projects.restora.highlights.1'),
+      t('projects.restora.highlights.2'),
+      t('projects.restora.highlights.3'),
     ],
     techStack: [
       { label: "Next.js 15", Icon: SiNextdotjs },
@@ -88,17 +86,16 @@ export const projects: Project[] = [
     liveUrl: "https://www.restoracosmeticos.com.br",
     repoUrl: "https://github.com/JPMworkPROG/restora.cosmetics",
     imageSrc: "/projects/restora/front.gif",
-    imageAlt: "Demonstração animada da landing page Restora exibindo a identidade visual da marca de cosméticos naturais",
+    imageAlt: t('projects.restora.imageAlt'),
   },
   {
-    title: "GenericRestClient - Cliente HTTP REST genérico",
-    description:
-      "Cliente REST genérico para .NET 9.0 com suporte a autenticação, rate limiting e retry automático. Desenvolvido como solução para integração com APIs REST de forma resiliente e configurável.",
+    title: t('projects.genericRestClient.title'),
+    description: t('projects.genericRestClient.description'),
     highlights: [
-      "Autenticação flexível com suporte a Bearer Token, OAuth2 (com refresh automático) e API Key via header ou query string.",
-      "Rate limiting configurável com controle de requisições por minuto, fila automática e tratamento de limites excedidos.",
-      "Retry automático inteligente para códigos 429 e 5xx, com suporte a header Retry-After e backoff exponencial ou linear configurável.",
-      "Resiliência robusta usando Polly para tratamento automático de falhas transitórias (timeout, DNS, etc.) e operações HTTP completas (GET, POST, PUT, DELETE).",
+      t('projects.genericRestClient.highlights.0'),
+      t('projects.genericRestClient.highlights.1'),
+      t('projects.genericRestClient.highlights.2'),
+      t('projects.genericRestClient.highlights.3'),
     ],
     techStack: [
       { label: ".NET 9.0", Icon: SiDotnet },
@@ -107,7 +104,7 @@ export const projects: Project[] = [
     liveUrl: "https://www.nuget.org/packages/GenericRestClient",
     repoUrl: "https://github.com/JPMworkPROG/GenericRestClient",
     imageSrc: "/projects/genericRestClient/logo.png",
-    imageAlt: "Demonstração do GenericRestClient exibindo funcionalidades de autenticação, rate limiting e retry automático",
+    imageAlt: t('projects.genericRestClient.imageAlt'),
   },
 ];
 

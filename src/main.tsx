@@ -9,6 +9,7 @@ import {
 } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
+import './i18n/config'
 import './styles/globals.css'
 import './styles/animations.css'
 
@@ -20,6 +21,7 @@ import Contact from './pages/Contact/Contact.tsx'
 import Formation from './pages/Formation/Formation.tsx'
 import Resume from './pages/Resume/Resume.tsx'
 import { validatePaginationSearch } from './lib/pagination'
+import { LanguageTransitionProvider } from './contexts/LanguageTransitionContext'
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -91,7 +93,9 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <LanguageTransitionProvider>
+        <RouterProvider router={router} />
+      </LanguageTransitionProvider>
     </StrictMode>,
   )
 }

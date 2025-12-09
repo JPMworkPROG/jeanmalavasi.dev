@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "resume": "Curriculo",
+    "formation": "Formação",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Desenvolvedor Full Stack",
+      "titlePrefix": "Olá, sou",
+      "name": "Jean Malavasi",
+      "description": "Especialista na criação de experiências digitais elegantes e na integração de sistemas, conectando APIs, serviços e dados com tecnologias modernas da web.",
+      "buttonText": "Meus Projetos",
+      "buttonLink": "/projects",
+      "profileImageAlt": "Jean Malavasi profile"
+    },
+    "manifesto": {
+      "label": "Manifesto",
+      "title": "Construo produtos com intenção e responsabilidade",
+      "description": "Cada entrega precisa gerar aprendizado e impacto mensurável. Acompanho desde a concepção até a manutenção, integrando sistemas e domínios distintos sem perder de vista a qualidade e a confiabilidade.",
+      "collaborationCard": {
+        "label": "Como colaboro",
+        "paragraphs": [
+          "Atuo tanto no frontend quanto no backend, criando interfaces que conversam com APIs. Participo de discovery, facilito handoffs, dessa maneira facilitando do desenvolvimento a entrega do sistema.",
+          "Valorizo comunicação clara e autonomia: comunico status com clareza, antecipo gargalos e crio documentação viva para onboardings mais rápidos."
+        ],
+        "signature": "— Jean Malavasi"
+      },
+      "pillars": [
+        "Trabalho guiado por métricas de produto e impacto de negócio.",
+        "Parceria próxima com design e stakeholders para reduzir retrabalho.",
+        "Coleta de requisitos → desenvolvimento → testes → implantação → monitoramento → feedback loops curtos."
+      ]
+    },
+    "stackMindset": {
+      "endToEnd": {
+        "title": "Entrega Ponta-a-Ponta",
+        "description": "Planejo, desenvolvo e acompanho releases completos, do levantamento de requisitos ao go-live monitorado."
+      },
+      "frontend": {
+        "title": "Frontend focado na experiência do usuário",
+        "description": "Interfaces acessíveis e performáticas, com animações suaves e componentização escalável."
+      },
+      "backend": {
+        "title": "Backend escalável e observável",
+        "description": "APIs tipadas, monitoradas, com logs e métricas acionáveis, para garantir a qualidade e o desempenho do sistema."
+      }
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle": "Competências técnicas",
+      "sections": {
+        "languages": "Línguas",
+        "technologies": "Tecnologias",
+        "frameworks": "Frameworks",
+        "principles": "Princípios"
+      },
+      "languages": [
+        {
+          "name": "Português",
+          "level": "Nativo"
+        },
+        {
+          "name": "Inglês",
+          "level": "Intermediário"
+        },
+        {
+          "name": "Espanhol",
+          "level": "Intermediário"
+        }
+      ]
+    }
+  },
+  "resume": {
+    "header": {
+      "label": "Currículo Profissional",
+      "title": "Experiência e Habilidades",
+      "description": "",
+      "downloadButton": "Baixar"
+    },
+    "labels": {
+      "location": "Localização",
+      "type": "Tipo",
+      "period": "Período",
+      "achievements": "Realizações",
+      "skills": "Competências"
+    },
+    "experience": {
+      "senseup": {
+        "company": "SenseUp",
+        "position": "Desenvolvedor Fullstack",
+        "location": "Vitória, Espírito Santo, Brasil · Remota",
+        "type": "Tempo integral",
+        "startDate": "jul de 2021",
+        "endDate": "o momento",
+        "duration": "4 anos 6 meses",
+        "achievements": {
+          "0": "Projetou e implementou um sistema de monitoramento de alarmes críticos em ambiente IoT, processando +500 mil eventos mensais, integrando regras de negócio e notificações automatizadas — reduzindo em 80% as falhas críticas não detectadas e diminuindo o tempo médio de resposta de 3–5 horas para ~20 minutos.",
+          "1": "Redesenhou a arquitetura do banco MSSQL para um modelo otimizado para dados hierárquicos e reestruturou o backend para operar sobre a nova estrutura, reduzindo o tempo médio de consultas complexas de 2m10s para 35s (redução de ~73%) e melhorando a performance de operações pesadas em até 4×.",
+          "2": "Desenvolveu e documentou integrações entre sistemas legados de gestão de locais, máquinas e pontos de inspeção e a plataforma IoT, criando APIs REST que processam +2 milhões de registros/mês. A solução eliminou divergências entre bases, garantiu sincronização em tempo real (<1s) e aumentou a confiabilidade operacional dos dados em >95%.",
+          "3": "Implementou dois pipelines críticos de telemetria, integrando Dynapredict e PI System, suportando +10 mil medições/hora, com mapeamento dinâmico de IDs, filtragem de duplicidades, formatação em lote e envio resiliente via APIs. A solução aumentou a taxa de entrega bem-sucedida para 99,8%, reduziu falhas de ingestão em >90% e habilitou monitoramento completo via Prometheus."
+        }
+      }
+    }
+  },
+  "contact": {
+    "header": {
+      "label": "Entre em contato",
+      "title": "Vamos conversar?",
+      "description": "Estou aberto para discutir oportunidades, projetos ou apenas trocar uma ideia sobre tecnologia e desenvolvimento."
+    },
+    "form": {
+      "title": "Envie uma mensagem",
+      "description": "Preencha o formulário abaixo e eu retornarei o mais breve possível.",
+      "email": "jpm.work.prog@gmail.com",
+      "whatsappNumber": "5527995892226",
+      "fields": {
+        "name": {
+          "label": "Nome",
+          "placeholder": "Seu nome"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "seu@email.com"
+        },
+        "subject": {
+          "label": "Assunto",
+          "placeholder": "Sobre o que você gostaria de conversar?"
+        },
+        "message": {
+          "label": "Mensagem",
+          "placeholder": "Conte-me mais sobre seu projeto ou ideia..."
+        }
+      },
+      "sendBy": "Enviar por",
+      "sendButton": "Enviar mensagem",
+      "method": {
+        "email": "E-mail",
+        "whatsapp": "WhatsApp"
+      }
+    },
+    "contactInfo": {
+      "title": "Informações de contato",
+      "description": "Você também pode me encontrar através destes canais.",
+      "email": {
+        "label": "E-mail",
+        "value": "jpm.work.prog@gmail.com"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "+55 (27) 99589-2226"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/jeanpintomalavasi"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "value": "@jpizi"
+      }
+    },
+    "locationAndAvailability": {
+      "title": "Localização e disponibilidade",
+      "description": "Entenda melhor meu contexto de trabalho e horário.",
+      "location": {
+        "label": "Localização",
+        "value": "Espírito Santo, Brasil, GMT-3"
+      },
+      "availability": {
+        "label": "Disponibilidade",
+        "value": "Remoto first • Disponível para syncs internacionais"
+      }
+    }
+  },
+  "projects": {
+    "header": {
+      "label": "Portfolio",
+      "title": "Projetos em Destaque",
+      "description": "Seleção curada com estudos e entregas profissionais que demonstram minha atuação como desenvolvedor full stack, sempre alinhada a boas práticas e foco em produto."
+    },
+    "actions": {
+      "accessApp": "Acessar aplicação",
+      "viewCode": "Ver código",
+      "openApiDocs": "OpenAPI Docs"
+    },
+    "todoManager": {
+      "title": "TodoManager — Planejamento de Demandas",
+      "description": "Aplicação full stack que orquestra o planejamento de produção da Latinhas LLC, combinando uma API Express + Prisma documentada em OpenAPI com uma interface Next.js responsiva pronta para uso corporativo.",
+      "highlights": [
+        "Frontend em Next.js 14 com React Hook Form, TanStack Query e dark mode nativo.",
+        "Backend modular em Express 4 + Prisma 5, validações centralizadas, logging estruturado e OpenAPI pública para squads parceiros.",
+        "CRUD completo de demandas e SKUs com validações, paginação e exclusão em cascata.",
+        "Integração containerizada com Docker e pipeline pronto para múltiplos ambientes."
+      ],
+      "imageAlt": "Demonstração animada do TodoManager exibindo o fluxo de demandas"
+    },
+    "restora": {
+      "title": "Restora — Landing Page",
+      "description": "Landing page da marca de cosméticos desenvolvida com foco em experiência do usuário, identidade visual consistente e alta performance.",
+      "highlights": [
+        "Desenvolvida com Next.js 15, aproveitando as features mais recentes do framework para baixas latências de Time to First Byte (TTFB).",
+        "Design moderno e responsivo, resultando em uma navegação mais fluida e otimizada.",
+        "Interface otimizada para conversão, buscando otimizar o tempo de permanência e reduzindo a taxa de rejeição.",
+        "Arquitetura totalmente responsiva, garantindo carregamento abaixo de 1,2s em 98% das resoluções testadas."
+      ],
+      "imageAlt": "Demonstração animada da landing page Restora exibindo a identidade visual da marca de cosméticos naturais"
+    },
+    "genericRestClient": {
+      "title": "GenericRestClient - Cliente HTTP REST genérico",
+      "description": "Cliente REST genérico para .NET 9.0 com suporte a autenticação, rate limiting e retry automático. Desenvolvido como solução para integração com APIs REST de forma resiliente e configurável.",
+      "highlights": [
+        "Autenticação flexível com suporte a Bearer Token, OAuth2 (com refresh automático) e API Key via header ou query string.",
+        "Rate limiting configurável com controle de requisições por minuto, fila automática e tratamento de limites excedidos.",
+        "Retry automático inteligente para códigos 429 e 5xx, com suporte a header Retry-After e backoff exponencial ou linear configurável.",
+        "Resiliência robusta usando Polly para tratamento automático de falhas transitórias (timeout, DNS, etc.) e operações HTTP completas (GET, POST, PUT, DELETE)."
+      ],
+      "imageAlt": "Demonstração do GenericRestClient exibindo funcionalidades de autenticação, rate limiting e retry automático"
+    }
+  },
+  "formation": {
+    "header": {
+      "label": "Formação Acadêmica",
+      "title": "Educação e Certificações",
+      "description": "Documentos oficiais da minha formação acadêmica e certificações profissionais."
+    },
+    "labels": {
+      "institution": "Instituição",
+      "period": "Período",
+      "documents": "Documentos",
+      "pdfDocument": "Documento PDF",
+      "view": "Visualizar",
+      "download": "Baixar"
+    },
+    "computerScience": {
+      "title": "Ciência da Computação",
+      "degree": "Bacharelado",
+      "institution": "Universidade de Vila Velha - UVV",
+      "startDate": "Janeiro de 2019",
+      "endDate": "Janeiro de 2023",
+      "description": "Formação acadêmica em Ciência da Computação, com foco em desenvolvimento de software, algoritmos e estruturas de dados.",
+      "documents": {
+        "diploma": {
+          "name": "Diploma",
+          "file": "/formation/diploma.pdf"
+        },
+        "transcript": {
+          "name": "Histórico Escolar",
+          "file": "/formation/historicoFaculdade.pdf"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Página não encontrada",
+    "description": "A página que você está procurando não existe ou foi movida para outro endereço.",
+    "backToHome": "Voltar para Home",
+    "viewProjects": "Ver Projetos"
+  }
+}

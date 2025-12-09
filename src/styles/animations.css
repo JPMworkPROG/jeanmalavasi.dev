@@ -69,6 +69,50 @@
     }
   }
 
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pageReload {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.3;
+      transform: scale(0.98);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeInReload {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: translateY(5px) scale(0.99);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
@@ -91,6 +135,44 @@
 
   .animate-fade-in-up-scroll {
     animation: fadeInUpScroll 0.6s ease-out forwards;
+  }
+
+  .animate-fade-out {
+    animation: fadeOut 0.2s ease-in forwards;
+  }
+
+  .animate-page-reload {
+    animation: pageReload 0.55s ease-in-out forwards;
+  }
+
+  .animate-fade-in-reload {
+    animation: fadeInReload 0.3s ease-out forwards;
+  }
+
+  .language-transition {
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+  }
+
+  .language-transition.transitioning {
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
+  }
+
+  .language-transition.transitioning main {
+    animation: fadeOut 0.2s ease-in forwards;
+  }
+
+  .language-transition:not(.transitioning) main {
+    animation: fadeInReload 0.3s ease-out forwards;
+  }
+
+  main.language-transitioning {
+    animation: fadeOut 0.2s ease-in forwards;
+  }
+
+  main.language-transitioned {
+    animation: fadeInReload 0.3s ease-out forwards;
   }
 
   .animation-delay-200 {
@@ -151,4 +233,3 @@
     }
   }
 }
-

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FileText, Download } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import type { Document } from "../data";
 import { handleDownload, handleView } from "../../../lib/utils";
 
@@ -10,6 +11,7 @@ interface DocumentCardProps {
 }
 
 export function DocumentCard({ document, animationDelay }: DocumentCardProps) {
+   const { t } = useTranslation();
    const Icon = document.icon;
 
    return (
@@ -23,7 +25,7 @@ export function DocumentCard({ document, animationDelay }: DocumentCardProps) {
             </div>
             <div className="flex-1 space-y-2">
                <h3 className="font-semibold">{document.name}</h3>
-               <p className="text-sm text-muted-foreground">Documento PDF</p>
+               <p className="text-sm text-muted-foreground">{t('formation.labels.pdfDocument')}</p>
             </div>
          </div>
          <div className="flex flex-wrap gap-2">
@@ -32,14 +34,14 @@ export function DocumentCard({ document, animationDelay }: DocumentCardProps) {
                className="flex-1 sm:flex-initial bg-primary hover:bg-primary/90 cursor-pointer"
             >
                <FileText className="h-4 w-4 mr-2" />
-               Visualizar
+               {t('formation.labels.view')}
             </Button>
             <Button
                onClick={() => handleDownload(document.file, document.name)}
                className="flex-1 sm:flex-initial bg-primary hover:bg-primary/90 cursor-pointer"
             >
                <Download className="h-4 w-4 mr-2" />
-               Baixar
+               {t('formation.labels.download')}
             </Button>
          </div>
       </Card>

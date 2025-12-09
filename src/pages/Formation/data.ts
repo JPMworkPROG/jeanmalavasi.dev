@@ -7,11 +7,11 @@ export interface FormationHeader {
   description: string;
 }
 
-export const formationHeader: FormationHeader = {
-  label: "Formação Acadêmica",
-  title: "Educação e Certificações",
-  description: "Documentos oficiais da minha formação acadêmica e certificações profissionais.",
-};
+export const getFormationHeader = (t: (key: string) => string): FormationHeader => ({
+  label: t('formation.header.label'),
+  title: t('formation.header.title'),
+  description: t('formation.header.description'),
+});
 
 export interface Document {
   name: string;
@@ -30,24 +30,24 @@ export interface Formation {
   documents: Document[];
 }
 
-export const formations: Formation[] = [
+export const getFormations = (t: (key: string) => string): Formation[] => [
   {
-    title: "Ciência da Computação",
-    degree: "Bacharelado",
-    institution: "Universidade de Vila Velha - UVV",
-    startDate: "Janeiro de 2019",
-    endDate: "Janeiro de 2023",
-    description: "Formação acadêmica em Ciência da Computação, com foco em desenvolvimento de software, algoritmos e estruturas de dados.",
+    title: t('formation.computerScience.title'),
+    degree: t('formation.computerScience.degree'),
+    institution: t('formation.computerScience.institution'),
+    startDate: t('formation.computerScience.startDate'),
+    endDate: t('formation.computerScience.endDate'),
+    description: t('formation.computerScience.description'),
     documents: [
       {
-        name: "Diploma",
-        file: "/formation/diploma.pdf",
+        name: t('formation.computerScience.documents.diploma.name'),
+        file: t('formation.computerScience.documents.diploma.file'),
         type: "pdf",
         icon: GraduationCap,
       },
       {
-        name: "Histórico Escolar",
-        file: "/formation/historicoFaculdade.pdf",
+        name: t('formation.computerScience.documents.transcript.name'),
+        file: t('formation.computerScience.documents.transcript.file'),
         type: "pdf",
         icon: FileText,
       },

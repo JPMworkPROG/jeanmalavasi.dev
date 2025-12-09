@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Home, AlertCircle } from "lucide-react";
@@ -6,6 +7,8 @@ import { PAGINATION_CONFIG } from "@/lib/pagination";
 import "./NotFound.css";
 
 export default function NotFound() {
+  const { t } = useTranslation();
+
   return (
     <div className="container mx-auto px-6 py-16">
       <div className="flex min-h-[60vh] items-center justify-center">
@@ -17,10 +20,10 @@ export default function NotFound() {
           </div>
 
           <div className="space-y-4">
-            <h1 className="text-6xl font-bold text-primary">404</h1>
-            <h2 className="text-3xl font-semibold">Página não encontrada</h2>
+            <h1 className="text-6xl font-bold text-primary">{t('notFound.title')}</h1>
+            <h2 className="text-3xl font-semibold">{t('notFound.heading')}</h2>
             <p className="mx-auto max-w-md text-muted-foreground text-lg">
-              A página que você está procurando não existe ou foi movida para outro endereço.
+              {t('notFound.description')}
             </p>
           </div>
 
@@ -28,12 +31,12 @@ export default function NotFound() {
             <Button asChild>
               <Link to="/">
                 <Home className="mr-2 h-4 w-4" />
-                Voltar para Home
+                {t('notFound.backToHome')}
               </Link>
             </Button>
             <Button variant="outline" asChild>
               <Link to="/projects" search={{ page: PAGINATION_CONFIG.DEFAULT_PAGE }}>
-                Ver Projetos
+                {t('notFound.viewProjects')}
               </Link>
             </Button>
           </div>

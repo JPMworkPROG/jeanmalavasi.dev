@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import type { ResumeHeader as ResumeHeaderType } from "../data";
 
 interface ResumeHeaderProps {
@@ -16,6 +17,8 @@ const handleDownload = () => {
 };
 
 export function ResumeHeader({ header }: ResumeHeaderProps) {
+  const { t } = useTranslation();
+
   return (
     <header className="space-y-3 opacity-0 animate-fade-in-up">
       <div className="space-y-3">
@@ -33,7 +36,7 @@ export function ResumeHeader({ header }: ResumeHeaderProps) {
           className="mt-2 bg-primary hover:bg-primary/90 opacity-0 animate-fade-in animation-delay-400 cursor-pointer"
         >
           <Download className="mr-2 h-4 w-4" />
-          Download PDF
+          {t('resume.header.downloadButton')}
         </Button>
       </div>
     </header>

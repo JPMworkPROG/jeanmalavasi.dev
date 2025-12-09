@@ -7,11 +7,11 @@ export interface ContactHeader {
   description: string;
 }
 
-export const contactHeader: ContactHeader = {
-  label: "Entre em contato",
-  title: "Vamos conversar?",
-  description: "Estou aberto para discutir oportunidades, projetos ou apenas trocar uma ideia sobre tecnologia e desenvolvimento.",
-};
+export const getContactHeader = (t: (key: string) => string): ContactHeader => ({
+  label: t('contact.header.label'),
+  title: t('contact.header.title'),
+  description: t('contact.header.description'),
+});
 
 export interface ContactInfoItem {
   icon: ComponentType<{ className?: string }>;
@@ -26,36 +26,36 @@ export interface ContactInfo {
   items: ContactInfoItem[];
 }
 
-export const contactInfo: ContactInfo = {
-  title: "Informações de contato",
-  description: "Você também pode me encontrar através destes canais.",
+export const getContactInfo = (t: (key: string) => string): ContactInfo => ({
+  title: t('contact.contactInfo.title'),
+  description: t('contact.contactInfo.description'),
   items: [
     {
       icon: Mail,
-      label: "E-mail",
-      value: "jpm.work.prog@gmail.com",
+      label: t('contact.contactInfo.email.label'),
+      value: t('contact.contactInfo.email.value'),
       href: "mailto:jpm.work.prog@gmail.com",
     },
     {
       icon: MessageCircle,
-      label: "WhatsApp",
-      value: "+55 (27) 99589-2226",
+      label: t('contact.contactInfo.whatsapp.label'),
+      value: t('contact.contactInfo.whatsapp.value'),
       href: "https://wa.me/5527995892226",
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/jeanpintomalavasi",
+      label: t('contact.contactInfo.linkedin.label'),
+      value: t('contact.contactInfo.linkedin.value'),
       href: "https://www.linkedin.com/in/jeanpintomalavasi/",
     },
     {
       icon: Instagram,
-      label: "Instagram",
-      value: "@jpizi",
+      label: t('contact.contactInfo.instagram.label'),
+      value: t('contact.contactInfo.instagram.value'),
       href: "https://www.instagram.com/jpizi/",
     },
   ],
-};
+});
 
 export interface LocationAndAvailabilityItems {
   icon: ComponentType<{ className?: string }>;
@@ -70,22 +70,22 @@ export interface LocationAndAvailability {
   items: LocationAndAvailabilityItems[];
 }
 
-export const locationAndAvailability: LocationAndAvailability = {
-  title: "Localização e disponibilidade",
-  description: "Entenda melhor meu contexto de trabalho e horário.",
+export const getLocationAndAvailability = (t: (key: string) => string): LocationAndAvailability => ({
+  title: t('contact.locationAndAvailability.title'),
+  description: t('contact.locationAndAvailability.description'),
   items: [
     {
       icon: MapPin,
-      label: "Localização",
-      value: "Espírito Santo, Brasil, GMT-3",
+      label: t('contact.locationAndAvailability.location.label'),
+      value: t('contact.locationAndAvailability.location.value'),
     },
     {
       icon: Clock,
-      label: "Disponibilidade",
-      value: "Remoto first • Disponível para syncs internacionais",
+      label: t('contact.locationAndAvailability.availability.label'),
+      value: t('contact.locationAndAvailability.availability.value'),
     },
   ],
-};
+});
 
 export interface FormData {
   title: string;
@@ -94,10 +94,10 @@ export interface FormData {
   whatsappNumber: string;
 }
 
-export const formData: FormData = {
-  title: "Envie uma mensagem",
-  description: "Preencha o formulário abaixo e eu retornarei o mais breve possível.",
-  email: "jpm.work.prog@gmail.com",
-  whatsappNumber: "5527995892226",
-};
+export const getFormData = (t: (key: string) => string): FormData => ({
+  title: t('contact.form.title'),
+  description: t('contact.form.description'),
+  email: t('contact.form.email'),
+  whatsappNumber: t('contact.form.whatsappNumber'),
+});
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { MethodToggle } from "./MethodToggle";
 import type { FormData as FormDataType } from "../data";
 import { handleContactSubmit } from "@/lib/utils";
@@ -11,6 +12,7 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ formData }: ContactFormProps) {
+  const { t } = useTranslation();
   const [method, setMethod] = useState<"email" | "whatsapp">("email");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -39,7 +41,7 @@ export function ContactForm({ formData }: ContactFormProps) {
         <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-fade-in animation-delay-800">
           <div className="space-y-2">
             <label htmlFor="name" className="text-sm font-medium">
-              Nome
+              {t('contact.form.fields.name.label')}
             </label>
             <input
               type="text"
@@ -47,13 +49,13 @@ export function ContactForm({ formData }: ContactFormProps) {
               name="name"
               required
               className={inputClass}
-              placeholder="Seu nome"
+              placeholder={t('contact.form.fields.name.placeholder')}
             />
           </div>
 
           <div className="space-y-2">
             <label htmlFor="email" className="text-sm font-medium">
-              E-mail
+              {t('contact.form.fields.email.label')}
             </label>
             <input
               type="email"
@@ -61,13 +63,13 @@ export function ContactForm({ formData }: ContactFormProps) {
               name="email"
               required
               className={inputClass}
-              placeholder="seu@email.com"
+              placeholder={t('contact.form.fields.email.placeholder')}
             />
           </div>
 
           <div className="space-y-2">
             <label htmlFor="subject" className="text-sm font-medium">
-              Assunto
+              {t('contact.form.fields.subject.label')}
             </label>
             <input
               type="text"
@@ -75,13 +77,13 @@ export function ContactForm({ formData }: ContactFormProps) {
               name="subject"
               required
               className={inputClass}
-              placeholder="Sobre o que você gostaria de conversar?"
+              placeholder={t('contact.form.fields.subject.placeholder')}
             />
           </div>
 
           <div className="space-y-2">
             <label htmlFor="message" className="text-sm font-medium">
-              Mensagem
+              {t('contact.form.fields.message.label')}
             </label>
             <textarea
               id="message"
@@ -89,7 +91,7 @@ export function ContactForm({ formData }: ContactFormProps) {
               required
               rows={4}
               className={`${inputClass} resize-none`}
-              placeholder="Conte-me mais sobre seu projeto ou ideia..."
+              placeholder={t('contact.form.fields.message.placeholder')}
             />
           </div>
 
@@ -97,7 +99,7 @@ export function ContactForm({ formData }: ContactFormProps) {
 
           <Button type="submit" className="w-full sm:w-auto">
             <Send className="mr-2 h-4 w-4" />
-            Enviar mensagem
+            {t('contact.form.sendButton')}
           </Button>
         </form>
       </Card>

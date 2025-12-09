@@ -1,12 +1,13 @@
 import { Card } from "@/components/ui/card";
-import { manifestoPillars, type ManifestoData } from "../data";
+import type { ManifestoData } from "../data";
 import { getAnimationDelay, ANIMATION_DELAYS } from "../../../lib/utils";
 
 interface ManifestoSectionProps {
   manifestoData: ManifestoData;
+  pillars: string[];
 }
 
-export function ManifestoSection({ manifestoData }: ManifestoSectionProps) {
+export function ManifestoSection({ manifestoData, pillars }: ManifestoSectionProps) {
   return (
     <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] items-start opacity-0 animate-fade-in-up-scroll animation-delay-500">
       <div className="space-y-5 opacity-0 animate-slide-in-left animation-delay-700">
@@ -16,9 +17,9 @@ export function ManifestoSection({ manifestoData }: ManifestoSectionProps) {
           {manifestoData.description}
         </p>
         <ul className="space-y-3 text-muted-foreground">
-          {manifestoPillars.map((pillar, index) => (
+          {pillars.map((pillar, index) => (
             <li
-              key={pillar}
+              key={index}
               className="flex gap-3 opacity-0 animate-slide-in-left"
               style={{ animationDelay: getAnimationDelay(ANIMATION_DELAYS.BASE, index) }}
             >

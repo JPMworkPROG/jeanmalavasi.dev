@@ -38,19 +38,18 @@ export interface HeroData {
   };
 }
 
-export const heroData: HeroData = {
-  subtitle: "Desenvolvedor Full Stack",
-  titlePrefix: "Olá, sou",
-  name: "Jean Malavasi",
-  description:
-    "Especialista na criação de experiências digitais elegantes e na integração de sistemas, conectando APIs, serviços e dados com tecnologias modernas da web.",
-  buttonText: "Meus Projetos",
-  buttonLink: "/projects",
+export const getHeroData = (t: (key: string) => string): HeroData => ({
+  subtitle: t('home.hero.subtitle'),
+  titlePrefix: t('home.hero.titlePrefix'),
+  name: t('home.hero.name'),
+  description: t('home.hero.description'),
+  buttonText: t('home.hero.buttonText'),
+  buttonLink: t('home.hero.buttonLink'),
   profileImage: {
     src: "/homeProfile.svg",
-    alt: "Jean Malavasi profile",
+    alt: t('home.hero.profileImageAlt'),
   },
-};
+});
 
 export interface ManifestoData {
   label: string;
@@ -63,26 +62,25 @@ export interface ManifestoData {
   };
 }
 
-export const manifestoData: ManifestoData = {
-  label: "Manifesto",
-  title: "Construo produtos com intenção e responsabilidade",
-  description:
-    "Cada entrega precisa gerar aprendizado e impacto mensurável. Acompanho desde a concepção até a manutenção, integrando sistemas e domínios distintos sem perder de vista a qualidade e a confiabilidade.",
+export const getManifestoData = (t: (key: string) => string): ManifestoData => ({
+  label: t('home.manifesto.label'),
+  title: t('home.manifesto.title'),
+  description: t('home.manifesto.description'),
   collaborationCard: {
-    label: "Como colaboro",
+    label: t('home.manifesto.collaborationCard.label'),
     paragraphs: [
-      "Atuo tanto no frontend quanto no backend, criando interfaces que conversam com APIs. Participo de discovery, facilito handoffs, dessa maneira facilitando do desenvolvimento a entrega do sistema.",
-      "Valorizo comunicação clara e autonomia: comunico status com clareza, antecipo gargalos e crio documentação viva para onboardings mais rápidos.",
+      t('home.manifesto.collaborationCard.paragraphs.0'),
+      t('home.manifesto.collaborationCard.paragraphs.1'),
     ],
-    signature: "— Jean Malavasi",
+    signature: t('home.manifesto.collaborationCard.signature'),
   },
-};
+});
 
-export const manifestoPillars = [
-  "Trabalho guiado por métricas de produto e impacto de negócio.",
-  "Parceria próxima com design e stakeholders para reduzir retrabalho.",
-  "Coleta de requisitos → desenvolvimento → testes → implantação → monitoramento → feedback loops curtos.",
-] as const;
+export const getManifestoPillars = (t: (key: string) => string): string[] => [
+  t('home.manifesto.pillars.0'),
+  t('home.manifesto.pillars.1'),
+  t('home.manifesto.pillars.2'),
+];
 
 export interface StackMindsetItem {
   title: string;
@@ -90,21 +88,20 @@ export interface StackMindsetItem {
   Icon: ComponentType<{ className?: string }>;
 }
 
-export const stackMindset: StackMindsetItem[] = [
+export const getStackMindset = (t: (key: string) => string): StackMindsetItem[] => [
   {
-    title: "Entrega Ponta-a-Ponta",
-    description: "Planejo, desenvolvo e acompanho releases completos, do levantamento de requisitos ao go-live monitorado.",
+    title: t('home.stackMindset.endToEnd.title'),
+    description: t('home.stackMindset.endToEnd.description'),
     Icon: Compass,
   },
   {
-    title: "Frontend focado na experiência do usuário",
-    description:
-      "Interfaces acessíveis e performáticas, com animações suaves e componentização escalável.",
+    title: t('home.stackMindset.frontend.title'),
+    description: t('home.stackMindset.frontend.description'),
     Icon: Layers,
   },
   {
-    title: "Backend escalável e observável",
-    description: "APIs tipadas, monitoradas, com logs e métricas acionáveis, para garantir a qualidade e o desempenho do sistema.",
+    title: t('home.stackMindset.backend.title'),
+    description: t('home.stackMindset.backend.description'),
     Icon: Gauge,
   },
 ];
@@ -126,11 +123,11 @@ export interface Skills {
   principles: SkillItem[];
 }
 
-export const skills: Skills = {
+export const getSkills = (t: (key: string) => string): Skills => ({
   languages: [
-    { name: "Português", level: "Nativo" },
-    { name: "Inglês", level: "Intermediário" },
-    { name: "Espanhol", level: "Intermediário" }
+    { name: t('home.skills.languages.0.name'), level: t('home.skills.languages.0.level') },
+    { name: t('home.skills.languages.1.name'), level: t('home.skills.languages.1.level') },
+    { name: t('home.skills.languages.2.name'), level: t('home.skills.languages.2.level') }
   ],
   technologies: [
     { name: "Node.js", Icon: SiNodedotjs },
@@ -167,7 +164,7 @@ export const skills: Skills = {
     { name: "TDD", Icon: TestTube },
     { name: "CI/CD", Icon: Workflow },
   ],
-};
+});
 
 export interface SocialLink {
   href: string;
