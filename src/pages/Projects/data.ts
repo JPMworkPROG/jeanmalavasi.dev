@@ -47,12 +47,7 @@ export const getProjects = (t: TFunction): Project[] => [
   {
     title: t('projects.todoManager.title'),
     description: t('projects.todoManager.description'),
-    highlights: [
-      t('projects.todoManager.highlights.0'),
-      t('projects.todoManager.highlights.1'),
-      t('projects.todoManager.highlights.2'),
-      t('projects.todoManager.highlights.3'),
-    ],
+    highlights: t('projects.todoManager.highlights', { returnObjects: true }) as string[],
     techStack: [
       { label: "Next.js 14", Icon: SiNextdotjs },
       { label: "React Query", Icon: SiReactquery },
@@ -73,12 +68,7 @@ export const getProjects = (t: TFunction): Project[] => [
   {
     title: t('projects.restora.title'),
     description: t('projects.restora.description'),
-    highlights: [
-      t('projects.restora.highlights.0'),
-      t('projects.restora.highlights.1'),
-      t('projects.restora.highlights.2'),
-      t('projects.restora.highlights.3'),
-    ],
+    highlights: t('projects.restora.highlights', { returnObjects: true }) as string[],
     techStack: [
       { label: "Next.js 15", Icon: SiNextdotjs },
       { label: "TailwindCSS", Icon: SiTailwindcss },
@@ -92,12 +82,7 @@ export const getProjects = (t: TFunction): Project[] => [
   {
     title: t('projects.genericRestClient.title'),
     description: t('projects.genericRestClient.description'),
-    highlights: [
-      t('projects.genericRestClient.highlights.0'),
-      t('projects.genericRestClient.highlights.1'),
-      t('projects.genericRestClient.highlights.2'),
-      t('projects.genericRestClient.highlights.3'),
-    ],
+    highlights: t('projects.genericRestClient.highlights', { returnObjects: true }) as string[],
     techStack: [
       { label: ".NET 9.0", Icon: SiDotnet },
       { label: "Polly", Icon: GrPowerCycle },

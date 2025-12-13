@@ -9,10 +9,12 @@ interface ResumeHeaderProps {
 }
 
 export function ResumeHeader({ header }: ResumeHeaderProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const handleResumeDownload = () => {
-    handleDownload("/resume/JeanMalavasiCurriculo.pdf", "JeanMalavasiCurriculo.pdf");
+    const isEnglish = i18n.language === 'en';
+    const fileName = isEnglish ? "JeanMalavasiCurriculoEng.pdf" : "JeanMalavasiCurriculo.pdf";
+    handleDownload(`/resume/${fileName}`, fileName);
   };
 
   return (

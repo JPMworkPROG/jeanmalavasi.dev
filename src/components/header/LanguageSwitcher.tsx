@@ -29,7 +29,7 @@ export function LanguageSwitcher() {
          onClick={toggleLanguage}
          disabled={isTransitioning}
          aria-label={ariaLabel}
-         className="p-2 cursor-pointer bg-transparent hover:bg-primary/30"
+         className="p-2 cursor-pointer bg-transparent hover:bg-primary/30 shrink-0"
       >
          <img
             src={isPortuguese ? '/flags/br.png' : '/flags/usa.png'}

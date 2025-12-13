@@ -69,19 +69,13 @@ export const getManifestoData = (t: TFunction): ManifestoData => ({
   description: t('home.manifesto.description'),
   collaborationCard: {
     label: t('home.manifesto.collaborationCard.label'),
-    paragraphs: [
-      t('home.manifesto.collaborationCard.paragraphs.0'),
-      t('home.manifesto.collaborationCard.paragraphs.1'),
-    ],
+    paragraphs: t('home.manifesto.collaborationCard.paragraphs', { returnObjects: true }) as string[],
     signature: t('home.manifesto.collaborationCard.signature'),
   },
 });
 
-export const getManifestoPillars = (t: TFunction): string[] => [
-  t('home.manifesto.pillars.0'),
-  t('home.manifesto.pillars.1'),
-  t('home.manifesto.pillars.2'),
-];
+export const getManifestoPillars = (t: TFunction): string[] =>
+  t('home.manifesto.pillars', { returnObjects: true }) as string[];
 
 export interface StackMindsetItem {
   title: string;
@@ -125,11 +119,9 @@ export interface Skills {
 }
 
 export const getSkills = (t: TFunction): Skills => ({
-  languages: [
-    { name: t('home.skills.languages.0.name'), level: t('home.skills.languages.0.level') },
-    { name: t('home.skills.languages.1.name'), level: t('home.skills.languages.1.level') },
-    { name: t('home.skills.languages.2.name'), level: t('home.skills.languages.2.level') }
-  ],
+  languages: (t('home.skills.languages', { returnObjects: true }) as Array<{ name: string; level: string }>).map(
+    (lang) => ({ name: lang.name, level: lang.level })
+  ),
   technologies: [
     { name: "Node.js", Icon: SiNodedotjs },
     { name: "JavaScript", Icon: SiJavascript },

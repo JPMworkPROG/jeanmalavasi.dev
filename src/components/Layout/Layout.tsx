@@ -30,20 +30,20 @@ export default function Layout({ children }: { children: ReactNode }) {
    return (
       <div className={`min-h-screen bg-background language-transition ${isTransitioning ? 'transitioning' : ''}`}>
          <header className="border-b border-border backdrop-blur-md sticky top-0 z-50">
-            <nav className="container mx-auto px-6 py-6">
-               <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-0">
-                  <Link to="/" className="text-2xl font-bold font-mono">
+            <nav className="container mx-auto px-6 py-6 relative">
+               <div className="flex items-center justify-between gap-4">
+                  <Link to="/" className="text-xl md:text-2xl font-bold font-mono shrink-0 min-w-0">
                      JeanMalavasi<span className="text-primary">.dev</span>
                   </Link>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2 md:gap-4 shrink-0">
                      <HeaderDesktopNavigation navigation={navigation} currentPath={location.pathname} />
                      <div className="hidden md:block">
                         <LanguageSwitcher />
                      </div>
-                  </div>
-                  <div className="flex items-center gap-4 md:hidden">
-                     <LanguageSwitcher />
-                     <HeaderMobileNavigation navigation={navigation} currentPath={location.pathname} />
+                     <div className="flex items-center gap-2 md:hidden">
+                        <LanguageSwitcher />
+                        <HeaderMobileNavigation navigation={navigation} currentPath={location.pathname} />
+                     </div>
                   </div>
                </div>
             </nav>

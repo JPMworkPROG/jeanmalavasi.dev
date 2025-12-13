@@ -49,10 +49,10 @@ export function MobileNavigation({ navigation, currentPath }: MobileNavigationPr
          </button>
          <div
             className={cn(
-               "basis-full md:hidden flex flex-col gap-4 overflow-hidden pt-0 transition-[max-height,opacity,margin-top] duration-300",
+               "absolute left-0 right-0 top-full md:hidden flex flex-col gap-4 overflow-hidden bg-background border-b border-border px-6 transition-[max-height,opacity,padding] duration-300 z-40",
                isOpen
-                  ? "max-h-96 pt-4 opacity-100 mt-2"
-                  : "pointer-events-none max-h-0 opacity-0 mt-0"
+                  ? "max-h-96 opacity-100 py-4"
+                  : "pointer-events-none max-h-0 opacity-0 py-0"
             )}
             aria-hidden={!isOpen}
          >
