@@ -6,7 +6,6 @@ import { MobileNavigation as HeaderMobileNavigation } from "@/components/header/
 import { LanguageSwitcher } from "@/components/header/LanguageSwitcher";
 import { useLanguageTransition } from "@/contexts/LanguageTransitionContext";
 import type { NavigationItem } from "@/components/header/types";
-import "./Layout.css";
 
 export default function Layout({ children }: { children: ReactNode }) {
    const location = useLocation();
@@ -21,7 +20,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       { name: t('nav.contact'), href: "/contacts" },
    ];
 
-   const languageTranstion = isTransitioning
+   const languageTransition = isTransitioning
       ? 'language-transitioning'
       : justTransitioned
          ? 'language-transitioned'
@@ -48,7 +47,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                </div>
             </nav>
          </header>
-         <main className={languageTranstion}>{children}</main>
+         <main className={languageTransition}>{children}</main>
       </div>
    );
 }

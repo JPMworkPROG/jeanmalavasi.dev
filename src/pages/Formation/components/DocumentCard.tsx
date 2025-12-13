@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { FileText, Download } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import type { Document } from "../data";
-import { handleDownload, handleView } from "../../../lib/utils";
+import { handleDownload, handleView } from "@/lib/utils";
 
 interface DocumentCardProps {
    document: Document;

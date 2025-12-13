@@ -5,7 +5,7 @@ import { ExperienceInfoItem } from "./ExperienceInfoItem";
 import { AchievementsList } from "./AchievementsList";
 import { SkillsList } from "./SkillsList";
 import type { Experience, SkillIconsRecord } from "../data";
-import { getAnimationDelay, ANIMATION_DELAYS } from "../../../lib/utils";
+import { getAnimationDelay, ANIMATION_DELAYS } from "@/lib/utils";
 
 interface ExperienceCardProps {
    experience: Experience;

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
-import "./header.css";
 import type { NavigationItem } from "./types";
 
 type MobileNavigationProps = {

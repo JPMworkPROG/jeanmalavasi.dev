@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import type { ManifestoData } from "../data";
-import { getAnimationDelay, ANIMATION_DELAYS } from "../../../lib/utils";
+import { getAnimationDelay, ANIMATION_DELAYS } from "@/lib/utils";
 
 interface ManifestoSectionProps {
   manifestoData: ManifestoData;

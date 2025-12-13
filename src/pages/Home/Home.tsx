@@ -17,6 +17,6 @@ export default function Home() {
         <StackMindsetSection items={getStackMindset(t)} />
         <SkillsSection skills={getSkills(t)} />
       </div>
-      </section>
+    </section>
   );
 }

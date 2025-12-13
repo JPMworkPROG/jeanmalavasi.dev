@@ -29,7 +29,7 @@ const rootRoute = createRootRoute({
       <Layout>
         <Outlet />
       </Layout>
-      <TanStackRouterDevtools />
+      {import.meta.env.DEV && <TanStackRouterDevtools />}
     </>
   ),
 })
