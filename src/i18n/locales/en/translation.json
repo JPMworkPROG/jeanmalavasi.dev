@@ -236,6 +236,17 @@
         "Robust resilience using Polly for automatic handling of transient failures (timeout, DNS, etc.) and complete HTTP operations (GET, POST, PUT, DELETE)."
       ],
       "imageAlt": "Demonstration of GenericRestClient showing authentication, rate limiting, and automatic retry features"
+    },
+    "nextRenderLab": {
+      "title": "NextRenderLab — Rendering Strategies",
+      "description": "Educational project demonstrating different Next.js rendering strategies with practical and interactive examples, exploring CSR, SSR, SSG, ISR, and hybrid approaches.",
+      "highlights": [
+        "Practical demonstration of five main strategies: CSR, SSR, SSG, ISR, and Hybrid with interactive examples and visualizations.",
+        "Developed with Next.js 16 (App Router), React 19, and TypeScript 5, leveraging the latest features of the ecosystem.",
+        "Each page demonstrates a specific strategy with technical information, rendering flows, and practical use cases.",
+        "Modern interface with Tailwind CSS 4, providing a clear and intuitive educational experience to understand when to use each approach."
+      ],
+      "imageAlt": "Demonstration of NextRenderLab showing different Next.js rendering strategies"
     }
   },
   "formation": {

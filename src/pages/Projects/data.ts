@@ -7,11 +7,13 @@ import {
   SiExpress,
   SiNextdotjs,
   SiPrisma,
+  SiReact,
   SiReacthookform,
   SiReactquery,
   SiShadcnui,
   SiSqlite,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 
 export interface ProjectsHeader {
@@ -44,6 +46,21 @@ export interface Project {
 }
 
 export const getProjects = (t: TFunction): Project[] => [
+  {
+    title: t('projects.nextRenderLab.title'),
+    description: t('projects.nextRenderLab.description'),
+    highlights: t('projects.nextRenderLab.highlights', { returnObjects: true }) as string[],
+    techStack: [
+      { label: "Next.js 16", Icon: SiNextdotjs },
+      { label: "React 19", Icon: SiReact },
+      { label: "TypeScript 5", Icon: SiTypescript },
+      { label: "TailwindCSS 4", Icon: SiTailwindcss },
+    ],
+    liveUrl: "https://next-render-lab-264366a7e6a1.herokuapp.com/",
+    repoUrl: "https://github.com/JPMworkPROG/NextRenderLab",
+    imageSrc: "/projects/nextRenderLab/front.gif",
+    imageAlt: t('projects.nextRenderLab.imageAlt'),
+  },
   {
     title: t('projects.todoManager.title'),
     description: t('projects.todoManager.description'),
